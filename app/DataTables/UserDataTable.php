@@ -66,7 +66,7 @@ class UserDataTable extends DataTable
         return [
             ['data' => 'name', 'title' => 'Nome'],
             ['data' => 'email', 'title' => 'Email'],
-            ['data' => 'password', 'title' => 'Senha'],
+            /* ['data' => 'password', 'title' => 'Senha'], */
         ];
     }
 
