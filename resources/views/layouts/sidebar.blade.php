@@ -6,7 +6,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../../assets/img/logo_posicionamento_estratégico_01.png" class="img-circle"
+                <img src="/img/logo_posicionamento_estratégico_01.png" class="img-circle"
                      alt="User Image"/>
             </div>
             <div class="pull-left info">
