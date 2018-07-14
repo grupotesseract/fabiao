@@ -42,17 +42,17 @@ class UserDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '80px'])
+            ->addAction(['width' => '80px', 'title' => 'Ação'])
             ->parameters([
-                'dom'     => 'Bfrtip',
-                'order'   => [[0, 'desc']],
-                'buttons' => [
-                    'create',
-                    'export',
-                    'print',
-                    'reset',
-                    'reload',
-                ],
+		    'dom'     => 'Bfrtip',
+		    'order'   => [[0, 'desc']],
+		    'buttons' => [
+			    ['extend' => 'create','text' => '<i class="fa fa-plus"></i> Adicionar'],
+			    ['extend' => 'reload','text' => '<i class="fa fa-refresh"></i> Atualizar'],
+		    ],
+		    'language' => [
+			    'url' => url('//cdn.datatables.net/plug-ins/1.10.18/i18n/Portuguese-Brasil.json')
+		    ],
             ]);
     }
 
@@ -64,10 +64,9 @@ class UserDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name',
-            'email',
-            'password',
-            'remember_token'
+            ['data' => 'name', 'title' => 'Nome'],
+            ['data' => 'email', 'title' => 'Email'],
+            /* ['data' => 'password', 'title' => 'Senha'], */
         ];
     }
 
