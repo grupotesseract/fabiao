@@ -64,6 +64,7 @@ services:
       networks:
         - frontend
         - backend
+      restart: always
 
 ### PHP-FPM Container #######################################
 
@@ -110,6 +111,7 @@ services:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
       networks:
         - backend
+      restart: always
 
 ### NGINX Server Container ##################################
 
@@ -132,6 +134,7 @@ services:
       networks:
         - frontend
         - backend
+      restart: always
 
 ### MySQL Container #########################################
 
@@ -153,6 +156,7 @@ services:
         - "${MYSQL_PORT}:3306"
       networks:
         - backend
+      restart: always
 
 ### phpMyAdmin Container ####################################
 
@@ -170,6 +174,7 @@ services:
       networks:
         - frontend
         - backend
+      restart: always
 
 
 ### Networks Setup ############################################
