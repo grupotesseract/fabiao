@@ -72,14 +72,14 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-					    <a href="/users/{!! Auth::user()->id !!}" class="btn btn-default btn-flat">Perfil</a>
+                                        <a href="/users/{!! Auth::user()->id !!}" class="btn btn-default btn-flat">Perfil</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
+                                        <a href="/logout" class="btn btn-default btn-flat"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Sair
                                         </a>
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="/logout" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </div>
@@ -119,7 +119,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{!! url('/') !!}">
+                <a class="navbar-brand" href="{!! secure_url('/') !!}">
                     3D Financial Academy
                 </a>
             </div>
@@ -127,14 +127,14 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{!! url('/home') !!}">Home</a></li>
+                    <li><a href="{!! secure_url('/home') !!}">Home</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <li><a href="{!! url('/login') !!}">Login</a></li>
-                    <li><a href="{!! url('/register') !!}">Cadastro</a></li>
+                    <li><a href="{!! secure_url('/login') !!}">Login</a></li>
+                    <li><a href="{!! secure_url('/register') !!}">Cadastro</a></li>
                 </ul>
             </div>
         </div>
@@ -151,11 +151,11 @@
     </div>
     @endif
 
-    <!-- jQuery 3.1.1 -->
+    // jQuery 3.1.1
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- AdminLTE App -->
+    // AdminLTE App
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.2/js/adminlte.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>

@@ -12,3 +12,5 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 tags
+
+laradock/logs
