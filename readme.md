@@ -1,32 +1,71 @@
+# 3D Planejamento Estratégico
 
-# Tesseract Laravel Boilerplate
+Site do 3D Planejamento Estratégico, desenvolvido por [Grupo Tesseract](https://grupotesseract.com.br) utilizando Laravel.
 
-Projeto Laravel 5.5 para facilitar a criacao de novos projetos
+## Requisitos
 
-- Laravel 5.5
-- Laravel Generator
-- Adminlte
-- Yajra DataTables v8
-- Languages / locale pt-BR
+- Docker
 
-## Clone com submodulos
+<small>
 
-`git clone --recursive https://github.com/grupotesseract/laravel-tesseract-boilerplate.git`
+``` bash
+curl -fsSL https://get.docker.com/ | sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo systemctl restart docker
+```
 
-## Rodando o projeto
+</small>
 
-Buildar Laradock
-- `cd laradock`
-- `cp env-example .env` (editar caso seja necessario portas / BD's diferentes)
-- `docker-compose up -d nginx php-fpm postgres`
-- `docker-compose exec workspace composer install`
+- Docker Compose
 
-Acertar .env do projeto de acordo com as configs do laradock
+```
+COMPOSE_VERSION=`git ls-remote https://github.com/docker/compose | grep refs/tags | grep -oP "[0-9]+\.[0-9][0-9]+\.[0-9]+$" | tail -n 1`
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo chmod +x /usr/local/bin/docker-compose
+```
 
-Se pá GGWP :+1:
+- Node
 
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
+source ~/.profile
+```
 
+- Gulp
 
+```
+npm i -g gulp-cli
+npm i
+```
 
+## Instalação
 
+```
+git clone github:grupotesseract/fabiao
+cd fabiao
+cp .env-example .env
+```
 
+Modifique o valor das variáveis conforme sua preferência, como porta do Nginx (padrão: 80), phpMyAdmin (padrão: 8080), MySQL (padrão: 3306), etc. Em seguida, suba os containers. Se já subiu alguma vez, e modificou algo no .env, será necessário refazer o build.
+
+```
+docker-compose up nginx php-fpm workspace mysql phpmyadmin
+```
+
+Em outra aba, na mesma pasta:
+
+```
+docker-compose exec --user=laradock workspace composer install
+docker-compose exec workspace php artisan october:install
+```
+
+Em outra aba, na mesma pasta:
+
+```
+gulp
+```
