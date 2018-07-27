@@ -1,6 +1,6 @@
-# 3D Planejamento Estratégico
+# 3D | Posicionamento Estratégico
 
-Site do 3D Planejamento Estratégico, desenvolvido por [Grupo Tesseract](https://grupotesseract.com.br) utilizando Laravel.
+Site do projeto **Posicionamento Estratégico** da empresa **3D Financial Academy**, desenvolvido por [Grupo Tesseract](https://grupotesseract.com.br) utilizando Laravel.
 
 ## Requisitos
 
