@@ -64,7 +64,7 @@ services:
       networks:
         - frontend
         - backend
-      restart: always
+      restart: unless-stopped
 
 ### PHP-FPM Container #######################################
 
@@ -111,7 +111,7 @@ services:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
       networks:
         - backend
-      restart: always
+      restart: unless-stopped
 
 ### NGINX Server Container ##################################
 
@@ -134,29 +134,23 @@ services:
       networks:
         - frontend
         - backend
-      restart: always
+      restart: unless-stopped
 
-### MySQL Container #########################################
+### PostgreSQL Container ####################################
 
-    mysql:
-      build:
-        context: ./laradock/mysql
-        args:
-          - MYSQL_VERSION=${MYSQL_VERSION}
-      environment:
-        - MYSQL_DATABASE=${MYSQL_DATABASE}
-        - MYSQL_USER=${MYSQL_USER}
-        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-        - TZ=${WORKSPACE_TIMEZONE}
+    postgres:
+      build: ./laradock/postgres
       volumes:
-        - ${DATA_SAVE_PATH}/mysql:/var/lib/mysql
-        - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
+        - ${DATA_SAVE_PATH}/postgres:/var/lib/postgresql/data
       ports:
-        - "${MYSQL_PORT}:3306"
+        - "${POSTGRES_PORT}:5432"
+      environment:
+        - POSTGRES_DB=${POSTGRES_DB}
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       networks:
         - backend
-      restart: always
+      restart: unless-stopped
 
 ### phpMyAdmin Container ####################################
 
@@ -174,7 +168,7 @@ services:
       networks:
         - frontend
         - backend
-      restart: always
+      restart: unless-stopped
 
 
 ### Networks Setup ############################################
@@ -188,5 +182,5 @@ networks:
 ### Volumes Setup #############################################
 
 volumes:
-  mysql:
+  postgres:
     driver: "local"
