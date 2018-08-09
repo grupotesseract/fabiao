@@ -23,3 +23,18 @@ Route::get('/home', 'HomeController@index');
 Route::resource('users', 'UserController');
 
 Auth::routes();
+
+
+Route::resource('textoEntradas', 'TextoEntradaController');
+
+Route::resource('textoExposicaoACrises', 'TextoExposicaoACriseController');
+
+Route::resource('textoPosicionamentoEstrategicos', 'TextoPosicionamentoEstrategicoController');
+
+Route::resource('textoPosicaoFinanceiras', 'TextoPosicaoFinanceiraController');
+
+Route::resource('textosCubos', 'TextosCuboController');
+
+Route::resource('textosIniciativas', 'TextosIniciativaController');
+
+Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
