@@ -37,16 +37,4 @@ Route::resource('textosCubos', 'TextosCuboController');
 
 Route::resource('textosIniciativas', 'TextosIniciativaController');
 
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
 Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
