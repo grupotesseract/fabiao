@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TextoPosicaoFinanceira;
 use App\DataTables\TextoPosicaoFinanceiraDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextoPosicaoFinanceiraRequest;
@@ -19,6 +20,7 @@ class TextoPosicaoFinanceiraController extends AppBaseController
     public function __construct(TextoPosicaoFinanceiraRepository $textoPosicaoFinanceiraRepo)
     {
         $this->textoPosicaoFinanceiraRepository = $textoPosicaoFinanceiraRepo;
+        $this->middleware('auth');
     }
 
     /**
@@ -30,6 +32,16 @@ class TextoPosicaoFinanceiraController extends AppBaseController
     public function index(TextoPosicaoFinanceiraDataTable $textoPosicaoFinanceiraDataTable)
     {
         return $textoPosicaoFinanceiraDataTable->render('texto_posicao_financeiras.index');
+    }
+
+    /**
+     * Retorna Listagem de Textos de Posição Financeira
+     *
+     * @return Response
+     */
+    public function textoPosicaoFinanceira()
+    {
+    	return response(TextoPosicaoFinanceira::get());
     }
 
     /**
