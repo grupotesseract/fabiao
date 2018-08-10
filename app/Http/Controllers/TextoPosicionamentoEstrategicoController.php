@@ -20,7 +20,6 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
     public function __construct(TextoPosicionamentoEstrategicoRepository $textoPosicionamentoEstrategicoRepo)
     {
         $this->textoPosicionamentoEstrategicoRepository = $textoPosicionamentoEstrategicoRepo;
-        $this->middleware('auth');
     }
 
     /**

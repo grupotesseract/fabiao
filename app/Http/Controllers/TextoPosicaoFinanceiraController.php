@@ -20,7 +20,6 @@ class TextoPosicaoFinanceiraController extends AppBaseController
     public function __construct(TextoPosicaoFinanceiraRepository $textoPosicaoFinanceiraRepo)
     {
         $this->textoPosicaoFinanceiraRepository = $textoPosicaoFinanceiraRepo;
-        $this->middleware('auth');
     }
 
     /**

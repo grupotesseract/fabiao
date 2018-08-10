@@ -20,7 +20,6 @@ class TextosCuboController extends AppBaseController
     public function __construct(TextosCuboRepository $textosCuboRepo)
     {
         $this->textosCuboRepository = $textosCuboRepo;
-        $this->middleware('auth');
     }
 
     /**

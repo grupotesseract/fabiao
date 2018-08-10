@@ -20,7 +20,6 @@ class TextoExposicaoACriseController extends AppBaseController
     public function __construct(TextoExposicaoACriseRepository $textoExposicaoACriseRepo)
     {
         $this->textoExposicaoACriseRepository = $textoExposicaoACriseRepo;
-        $this->middleware('auth');
     }
 
     /**

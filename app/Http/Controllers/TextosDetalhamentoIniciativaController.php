@@ -20,7 +20,6 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
     public function __construct(TextosDetalhamentoIniciativaRepository $textosDetalhamentoIniciativaRepo)
     {
         $this->textosDetalhamentoIniciativaRepository = $textosDetalhamentoIniciativaRepo;
-        $this->middleware('auth');
     }
 
     /**

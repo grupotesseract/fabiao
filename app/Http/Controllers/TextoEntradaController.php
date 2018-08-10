@@ -20,7 +20,6 @@ class TextoEntradaController extends AppBaseController
     public function __construct(TextoEntradaRepository $textoEntradaRepo)
     {
         $this->textoEntradaRepository = $textoEntradaRepo;
-        $this->middleware('auth');
     }
 
     /**
