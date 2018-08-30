@@ -15,7 +15,7 @@ class AdminSeeder extends Seeder
 	    User::create([
 		    'name' => 'Admin - Tesseract',
 		    'email' => 'admin@grupotesseract.com.br',
-		    'password' => 'admintesseract',
+		    'password' => bcrypt('admintesseract'),
 	    ]);
     }
 }
