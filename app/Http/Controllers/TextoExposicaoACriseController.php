@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TextoExposicaoACrise;
 use App\DataTables\TextoExposicaoACriseDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextoExposicaoACriseRequest;
@@ -30,6 +31,16 @@ class TextoExposicaoACriseController extends AppBaseController
     public function index(TextoExposicaoACriseDataTable $textoExposicaoACriseDataTable)
     {
         return $textoExposicaoACriseDataTable->render('texto_exposicao_a_crises.index');
+    }
+
+    /**
+     * Retorna Listagem de Textos de Exposicao à Crise
+     *
+     * @return Response
+     */
+    public function textoExposicaoACrise()
+    {
+    	return response(TextoExposicaoACrise::get());
     }
 
     /**

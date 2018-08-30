@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TextosCubo;
 use App\DataTables\TextosCuboDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextosCuboRequest;
@@ -30,6 +31,16 @@ class TextosCuboController extends AppBaseController
     public function index(TextosCuboDataTable $textosCuboDataTable)
     {
         return $textosCuboDataTable->render('textos_cubos.index');
+    }
+
+    /**
+     * Retorna Listagem de Textos do Cubo
+     *
+     * @return Response
+     */
+    public function textosCubo()
+    {
+    	return response(TextosCubo::get());
     }
 
     /**

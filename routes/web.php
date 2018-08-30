@@ -22,6 +22,22 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('users', 'UserController');
 
+// Rotas para API
+
+Route::get('api/texto_entrada', 'TextoEntradaController@textoEntrada');
+
+Route::get('api/texto_exposicao_a_crise', 'TextoExposicaoACriseController@textoExposicaoACrise');
+
+Route::get('api/texto_posicionamento_estrategico', 'TextoPosicionamentoEstrategicoController@textoPosicionamentoEstrategico');
+
+Route::get('api/texto_posicao_financeira', 'TextoPosicaoFinanceiraController@textoPosicaoFinanceira');
+
+Route::get('api/texto_cubo', 'TextosCuboController@textosCubo');
+
+Route::get('api/texto_iniciativa', 'TextosIniciativaController@textosIniciativa');
+
+Route::get('api/texto_detalhamento_iniciativa', 'TextosDetalhamentoIniciativaController@textosDetalhamentoIniciativa');
+
 Auth::routes();
 
 
@@ -38,3 +54,4 @@ Route::resource('textosCubos', 'TextosCuboController');
 Route::resource('textosIniciativas', 'TextosIniciativaController');
 
 Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
+
