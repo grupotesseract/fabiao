@@ -44,6 +44,34 @@ class TextosCuboController extends AppBaseController
     }
 
     /**
+     * Retorna Listagem de resposta do Cubo
+     *
+     * @param tipo_resposta onde 
+     * crise = reposta para exposição a crise,
+     * estrategico = reposta para posicionamento estrategico
+     * posicao = reposta para posição financeira
+     *
+     * @return Response
+     */
+    public function respostaCubo($tipo_resposta = 'crise')
+    {
+	$param_response = [
+		'crise'       => 'resposta_ec',
+		'estrategico' => 'resposta_pe',
+		'posicao'     => 'resposta_pf',
+	];
+
+	try {
+		$resposta = $param_response[$tipo_resposta];
+
+		return response(TextosCubo::get([$resposta]));
+		
+	} catch (\Throwable $e) {
+		return redirect()->route('resposta_cubo');
+	}
+    }
+
+    /**
      * Show the form for creating a new TextosCubo.
      *
      * @return Response
