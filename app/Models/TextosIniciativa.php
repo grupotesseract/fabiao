@@ -27,6 +27,9 @@ class TextosIniciativa extends Model
     protected $dates = ['deleted_at'];
 
 
+    protected $hidden = ['textos_cubos_id'];
+
+
     public $fillable = [
         'descritivo',
         'descritivo_pai',
@@ -63,6 +66,17 @@ class TextosIniciativa extends Model
         'textos_cubos_id' => 'required',
         'path_pdf' => 'required'
     ];
+
+    /**
+     * relacionamento p/ retornar cubo
+     *
+     * @return void
+     */
+    public function cubo()
+    {
+    	return $this->belongsTo('App\Models\TextosCubo', 'textos_cubos_id');
+    }
+    
 
     
 }

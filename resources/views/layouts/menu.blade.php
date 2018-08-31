@@ -23,7 +23,7 @@
 </li>
 
 <li class="{{ Request::is('textoPosicaoFinanceiras*') ? 'active' : '' }}">
-    <a href="{!! route('textoPosicaoFinanceiras.index') !!}">Posicao Financeira</a>
+    <a href="{!! route('textoPosicaoFinanceiras.index') !!}">Posição Financeira</a>
 </li>
 
 <li class="{{ Request::is('textosCubos*') ? 'active' : '' }}">

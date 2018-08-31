@@ -60,5 +60,16 @@ class TextosCubo extends Model
         'valor_compra' => 'required'
     ];
 
+    /**
+     * relacionamento com textos de iniciativa (muitos)
+     *
+     * @return void
+     */
+    public function textosIniciativa()
+    {
+	return $this->hasMany('App\Models\TextosIniciativa', 'id');
+    }
+    
+
     
 }
