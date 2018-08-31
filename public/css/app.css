@@ -8350,3 +8350,35 @@ button.close {
   }
 }
 
+.skin-blue .main-header li.user-header,
+.skin-blue .main-header .logo,
+.skin-blue .main-header .logo:hover,
+.skin-blue .main-header .navbar {
+  background-color: #494644;
+}
+
+.skin-blue .main-header .logo img {
+  height: 50px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+}
+
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+  right: 1px;
+  top: 52px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+  height: 95px;
+}
+
+.main-header .logo {
+  height: 52px;
+}
+
+.content-header > h1 {
+  margin: 10px 0 20px;
+}
+
