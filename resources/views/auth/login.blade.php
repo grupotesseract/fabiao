@@ -81,9 +81,6 @@
             </div>
         </form>
 
-        <a href="/password/reset">Esqueci minha senha</a><br>
-        <a href="/register" class="text-center">Cadastro</a>
-
     </div>
     <!-- /.login-box-body -->
 </div>
