@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\TextoEntradaDataTable;
+use App\Models\TextoEntrada;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextoEntradaRequest;
 use App\Http\Requests\UpdateTextoEntradaRequest;
@@ -30,6 +31,16 @@ class TextoEntradaController extends AppBaseController
     public function index(TextoEntradaDataTable $textoEntradaDataTable)
     {
         return $textoEntradaDataTable->render('texto_entradas.index');
+    }
+
+    /**
+     * Retorna Listagem de Textos de Entrada
+     *
+     * @return Response
+     */
+    public function textoEntrada()
+    {
+    	return response(TextoEntrada::get());
     }
 
     /**

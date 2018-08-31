@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TextosDetalhamentoIniciativa;
 use App\DataTables\TextosDetalhamentoIniciativaDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextosDetalhamentoIniciativaRequest;
@@ -30,6 +31,16 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
     public function index(TextosDetalhamentoIniciativaDataTable $textosDetalhamentoIniciativaDataTable)
     {
         return $textosDetalhamentoIniciativaDataTable->render('textos_detalhamento_iniciativas.index');
+    }
+
+    /**
+     * Retorna Listagem de Textos de Detalhamento de Iniciativa
+     *
+     * @return Response
+     */
+    public function textosDetalhamentoIniciativa()
+    {
+    	return response(TextosDetalhamentoIniciativa::get());
     }
 
     /**
