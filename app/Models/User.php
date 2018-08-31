@@ -36,7 +36,7 @@ class User extends Authenticatable
      * @var array
      */
     public static $rules = [
-        'email' => 'required|unique,users'
+        'email' => 'required|unique:users'
         
     ];
 
