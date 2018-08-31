@@ -12,4 +12,14 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+  .sass('resources/assets/sass/app.scss', 'public/css')
+  .browserSync({
+    open: false,
+    notify: false,
+    proxy: 'local.3d',
+    files: [
+      './resources/views/**/*.blade.php',
+      './public/css/app.css',
+      './public/js/app.js',
+    ],
+  });
