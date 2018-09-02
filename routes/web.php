@@ -12,50 +12,33 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('admin/home');
 });
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', function () {
+        return redirect('admin/home');
+    });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Route::resource('users', 'UserController');
+    Auth::routes();
+    Route::resource('home', 'HomeController');
+    Route::resource('users', 'UserController');
+    Route::resource('textoEntradas', 'TextoEntradaController');
+    Route::resource('textoExposicaoACrises', 'TextoExposicaoACriseController');
+    Route::resource('textoPosicionamentoEstrategicos', 'TextoPosicionamentoEstrategicoController');
+    Route::resource('textoPosicaoFinanceiras', 'TextoPosicaoFinanceiraController');
+    Route::resource('textosCubos', 'TextosCuboController');
+    Route::resource('textosIniciativas', 'TextosIniciativaController');
+    Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
+});
 
 // Rotas para API
-
 Route::get('api/texto_entrada', 'TextoEntradaController@textoEntrada');
-
 Route::get('api/texto_exposicao_a_crise', 'TextoExposicaoACriseController@textoExposicaoACrise');
-
 Route::get('api/texto_posicionamento_estrategico', 'TextoPosicionamentoEstrategicoController@textoPosicionamentoEstrategico');
-
 Route::get('api/texto_posicao_financeira', 'TextoPosicaoFinanceiraController@textoPosicaoFinanceira');
-
 Route::get('api/texto_cubo', 'TextosCuboController@textosCubo');
-
 Route::get('api/resposta_cubo/{tipo_resposta?}', 'TextosCuboController@respostaCubo')->name('resposta_cubo');
-
 Route::get('api/texto_iniciativa', 'TextosIniciativaController@textosIniciativa');
-
 Route::get('api/anexos', 'TextosIniciativaController@anexos');
-
 Route::get('api/texto_detalhamento_iniciativa', 'TextosDetalhamentoIniciativaController@textosDetalhamentoIniciativa');
-
-Auth::routes();
-
-
-Route::resource('textoEntradas', 'TextoEntradaController');
-
-Route::resource('textoExposicaoACrises', 'TextoExposicaoACriseController');
-
-Route::resource('textoPosicionamentoEstrategicos', 'TextoPosicionamentoEstrategicoController');
-
-Route::resource('textoPosicaoFinanceiras', 'TextoPosicaoFinanceiraController');
-
-Route::resource('textosCubos', 'TextosCuboController');
-
-Route::resource('textosIniciativas', 'TextosIniciativaController');
-
-Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
-

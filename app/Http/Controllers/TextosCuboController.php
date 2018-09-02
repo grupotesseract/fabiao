@@ -40,7 +40,7 @@ class TextosCuboController extends AppBaseController
      */
     public function textosCubo()
     {
-    	return response(TextosCubo::get());
+    	return response(TextosCubo::with('textosIniciativa')->get());
     }
 
     /**

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>3D Financial Academy | Login</title>
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -24,6 +25,9 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
 
+    <!-- Login Page CSS  -->
+    <link rel="stylesheet" href="/css/login.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,15 +38,16 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
+    <img class="login-img" src="/img/logo_posicionamento_estratégico_02.png" />
     <div class="login-logo">
-        <a href="/home"><b>3D </b>Financial Academy</a>
+        <a href="/admin/home"><b>3D </b>Financial Academy</a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
-        <form method="post" action="/login">
+        <form method="post" action="/admin/login">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
@@ -80,9 +85,6 @@
                 <!-- /.col -->
             </div>
         </form>
-
-        <a href="/password/reset">Esqueci minha senha</a><br>
-        <a href="/register" class="text-center">Cadastro</a>
 
     </div>
     <!-- /.login-box-body -->

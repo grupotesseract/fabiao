@@ -28,12 +28,6 @@
     <p>{!! $textosIniciativa->prioridade !!}</p>
 </div>
 
-<!-- Textos Cubos Id Field -->
-<div class="form-group">
-    {!! Form::label('textos_cubos_id', 'Textos Cubos Id:') !!}
-    <p>{!! $textosIniciativa->textos_cubos_id !!}</p>
-</div>
-
 <!-- Path Pdf Field -->
 <div class="form-group">
     {!! Form::label('path_pdf', 'Path Pdf:') !!}
