@@ -42,7 +42,7 @@
     <div class="login-box-body">
         <p class="login-box-msg">Reset your password</p>
 
-        <form method="post" action="{{ url('/password/reset') }}">
+        <form method="post" action="{{ url('/admin/password/reset') }}">
             {!! csrf_field() !!}
 
             <input type="hidden" name="token" value="{{ $token }}">

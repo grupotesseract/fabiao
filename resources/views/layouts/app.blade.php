@@ -60,14 +60,14 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="/users/{!! Auth::user()->id !!}" class="btn btn-default btn-flat">Perfil</a>
+                                        <a href="/admin/users/{!! Auth::user()->id !!}" class="btn btn-default btn-flat">Perfil</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="/logout" class="btn btn-default btn-flat"
+                                        <a href="/admin/logout" class="btn btn-default btn-flat"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Sair
                                         </a>
-                                        <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                                        <form id="logout-form" action="/admin/logout" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </div>
@@ -82,7 +82,7 @@
         <!-- Left side column. contains the logo and sidebar -->
         @include('layouts.sidebar')
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper {{ Request::is('*home*') ? 'home' : '' }}">
             @yield('content')
         </div>
 
@@ -150,9 +150,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
     <!-- Somente para desenvolvimento -->
-    <!-- <script id="__bs_script__">//<![CDATA[
+    <script id="__bs_script__">//<![CDATA[
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
-    //]]></script> -->
+    //]]></script>
     @yield('scripts')
 </body>
 </html>

@@ -48,7 +48,7 @@
             </div>
         @endif
 
-        <form method="post" action="{{ url('/password/email') }}">
+        <form method="post" action="{{ url('/admin/password/email') }}">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">

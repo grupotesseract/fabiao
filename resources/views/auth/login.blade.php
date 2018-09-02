@@ -40,14 +40,14 @@
 <div class="login-box">
     <img class="login-img" src="/img/logo_posicionamento_estratégico_02.png" />
     <div class="login-logo">
-        <a href="/home"><b>3D </b>Financial Academy</a>
+        <a href="/admin/home"><b>3D </b>Financial Academy</a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
-        <form method="post" action="/login">
+        <form method="post" action="/admin/login">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
