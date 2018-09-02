@@ -16,12 +16,6 @@
     <p>{!! $user->email !!}</p>
 </div>
 
-<!-- Password Field -->
-<div class="form-group">
-    {!! Form::label('password', 'Senha:') !!}
-    <p>{!! $user->password !!}</p>
-</div>
-
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Criado Em:') !!}
