@@ -36,7 +36,8 @@ class User extends Authenticatable
      * @var array
      */
     public static $rules = [
-        'email' => 'required|unique:users'
+	    'email' => 'required|email|unique:users',
+	    'password' => 'required|confirmed|min:4|max:30'
         
     ];
 

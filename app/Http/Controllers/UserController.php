@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use App\DataTables\UserDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateUserRequest;
@@ -51,13 +52,21 @@ class UserController extends AppBaseController
      */
     public function store(CreateUserRequest $request)
     {
-        $input = $request->all();
+	try {
+	    $input = $request->all();
 
-        $user = $this->userRepository->create($input);
+	    $input['password'] = Hash::make($input['password']);
 
-        Flash::success('User saved successfully.');
+	    $user = $this->userRepository->create($input);
 
-        return redirect(route('users.index'));
+	    Flash::success('User saved successfully.');
+
+	    return redirect(route('users.index'));
+	} catch (\Throwable $e) {
+	    Flash::error('Usuário já existente no banco. Use um endereço de email diferente.');
+
+	    return redirect(route('users.index'));
+	}
     }
 
     /**
@@ -118,7 +127,11 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        $user = $this->userRepository->update($request->all(), $id);
+	$input = $request->all();
+
+	$input['password'] = Hash::make($input['password']);
+
+        $user = $this->userRepository->update($input, $id);
 
         Flash::success('User updated successfully.');
 
