@@ -18,3 +18,5 @@ Route::prefix('admin')->group(function () {
         return $request->user();
     });
 });
+
+Route::post('pagseguro', 'PagSeguroController@post');
