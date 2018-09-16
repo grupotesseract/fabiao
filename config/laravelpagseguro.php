@@ -8,8 +8,8 @@ return [
      * Coloque abaixo as informações do seu cadastro no PagSeguro
      */
     'credentials' => [//INFORME AS CREDENCIAIS PADRÕES DE SUA LOJA, MAS PORDERÁ SER ALTERADA EM RUNTIME
-        'email' => 'denis_akira@outlook.com',
-        'token' => 'FCAB26416D6E456CB62816F7263FACA9',
+        'email' => env('PAGSEGURO_EMAIL'),
+        'token' => env('PAGSEGURO_TOKEN'),
     ],
 
     /*
@@ -27,9 +27,14 @@ return [
             'fixed' => env('APP_URL'), // Criar uma rota com este nome
         ],
         'notification' => [
-            'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
+            'callback' => function ($information) { // Callable
+                \Log::debug(print_r($information, 1));
+            },
+            // 'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
             'credential' => 'default', // Callable resolve credential function (notificationCode) : Credentials {}
-            'fixed' => env('APP_URL'), // Criar uma rota com este nome
+            'fixed' => env('PAGSEGURO_NOTIFICATION'), // Criar uma rota com este nome
+            // 'route-name' => 'pagseguro.notification',
+            
         ],
     ],
 
