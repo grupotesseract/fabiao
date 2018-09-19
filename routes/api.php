@@ -19,13 +19,13 @@ Route::prefix('admin')->group(function () {
     });
 });
 
-Route::post('pagseguro', 'PagSeguroController@post');
-
-// Route::post('notification', 'PagSeguroController@notification');
+Route::post('pagseguro', 'ClienteAPIController@pagamento');
 
 Route::post('/pagseguro/notification', [
-    'uses' => '\laravel\pagseguro\Platform\Laravel5\NotificationController@notification',
-    // 'uses' => 'PagSeguroController@notification',
+    // 'uses' => '\laravel\pagseguro\Platform\Laravel5\NotificationController@notification',
+    'uses' => 'PagSeguroController@notification',
     'as' => 'pagseguro.notification',
 ]);
+
+Route::resource('cliente', 'ClienteAPIController');
 

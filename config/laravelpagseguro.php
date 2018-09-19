@@ -2,7 +2,7 @@
 
 return [
     /* DEFINE SE SERÁ UTILIZADO O AMBIENTE DE TESTES */
-    'use-sandbox' => false,
+    'use-sandbox' => true,
 
     /*
      * Coloque abaixo as informações do seu cadastro no PagSeguro
@@ -33,7 +33,7 @@ return [
             // 'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
             'credential' => 'default', // Callable resolve credential function (notificationCode) : Credentials {}
             'fixed' => env('PAGSEGURO_NOTIFICATION'), // Criar uma rota com este nome
-            // 'route-name' => 'pagseguro.notification',
+            // 'route-name' => 'api.pagseguro.notification',
             
         ],
     ],
