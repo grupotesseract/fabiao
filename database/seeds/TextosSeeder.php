@@ -27,27 +27,27 @@ class TextosSeeder extends Seeder
             'texto_pergunta' => 'Considerando o Setor de atuação da sua empresa, qual o grau de exposição dela frente a crises?',
             'texto_resposta_1' => 'Maior',
             'texto_resposta_2' => 'Menor',
-            'descritivo_resposta_1' => 'A definir',
-            'descritivo_resposta_2' => 'A definir'
+            'descritivo_resposta_1' => 'Empresas de turismo ou veículos novos que podem ser afetados significativamente pela crise',
+            'descritivo_resposta_2' => 'Empresas do setor de alimentação básica, assim como de medicamentos são menos afetadas pela crise'
         ]);
 
         TextoPosicaoFinanceira::create([
             'texto_pergunta' => 'Qual a situação financeira da sua Empresa?',
             'texto_resposta_1' => 'Forte',
             'texto_resposta_2' => 'Fraca',
-            'descritivo_resposta_1' => 'A definir',
-            'descritivo_resposta_2' => 'A definir'
+            'descritivo_resposta_1' => 'Capital de giro é financiado exclusivamente com capital próprio e gerado pela operação principal do negócio e o fluxo de caixa é positivo honrando seus compromissos em dia através da geração de Lucro e Valor.',
+            'descritivo_resposta_2' => 'Sua empresa depende de financiamentos periódicos tanto de terceiros como bancos ou fornecedores ou dos recursos dos sócios vindos de outras fontes.'
         ]);
 
         TextoPosicionamentoEstrategico::create([
             'texto_pergunta' => 'Como você considera o posicionamento estratégico da sua empresa no mercado ?',
             'texto_resposta_1' => 'Forte',
             'texto_resposta_2' => 'Fraco',
-            'descritivo_resposta_1' => 'A definir',
-            'descritivo_resposta_2' => 'A definir'
+            'descritivo_resposta_1' => '~Empresas de turismo ou veículos novos que podem ser afetados significativamente pela crise',
+            'descritivo_resposta_2' => '~Empresas do setor de alimentação básica, assim como de medicamentos são menos afetadas pela crise'
         ]);
 
-        TextosCubo::create([
+        TextosCubo::insert([
             [
                 'descritivo' => 'Reabastecer o tanque',
                 'resposta_ec' => 'Maior',
