@@ -67,7 +67,7 @@ class TextosCubo extends Model
      */
     public function textosIniciativa()
     {
-	return $this->hasMany('App\Models\TextosIniciativa', 'id');
+        return $this->hasMany('App\Models\TextosIniciativa', 'id');
     }
     
 
