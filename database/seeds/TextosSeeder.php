@@ -6,13 +6,13 @@ use App\Models\TextoExposicaoACrise;
 use App\Models\TextoPosicaoFinanceira;
 use App\Models\TextoPosicionamentoEstrategico;
 use App\Models\TextosCubo;
-use App\Models\TextosIniciativa;
-use App\Models\TextosDetalhamentoIniciativa;
 
 class TextosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * Seeder separado dos demais por não utilizar foreign keys
+     * e ser a base para os demais seeders
      *
      * @return void
      */
@@ -105,9 +105,5 @@ class TextosSeeder extends Seeder
                 'valor_compra' => '9'
             ],
         ]);
-
-        /* TextosIniciativa::create([]); */
-
-        /* TextosDetalhamentoIniciativa::create([]); */
     }
 }
