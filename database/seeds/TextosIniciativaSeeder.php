@@ -281,7 +281,7 @@ class TextosIniciativaSeeder extends Seeder
                 'path_pdf' => '',
             ],
             [
-                'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer ',
+                'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
                 'descritivo_pai' => 'Realocar recursos para as atividades core',
                 'numero' => '5',
                 'prioridade' => '2',
@@ -289,7 +289,7 @@ class TextosIniciativaSeeder extends Seeder
                 'path_pdf' => '',
             ],
             [
-                'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer ',
+                'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
                 'descritivo_pai' => 'Realocar recursos para as atividades core',
                 'numero' => '5',
                 'prioridade' => '1',
