@@ -1,4 +1,4 @@
-D<?php
+<?php
 
 namespace App\DataTables;
 

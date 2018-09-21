@@ -20,7 +20,6 @@ use App\Models\PagSeguroModel;
 
 class ClienteAPIController extends AppBaseController
 {
-    /** @var  ClienteRepository */
     private $clienteRepository;
 
     public function __construct(ClienteRepository $clienteRepo)
@@ -71,7 +70,6 @@ class ClienteAPIController extends AppBaseController
      */
     public function show($id)
     {
-        /** @var Cliente $cliente */
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
@@ -94,7 +92,6 @@ class ClienteAPIController extends AppBaseController
     {
         $input = $request->all();
 
-        /** @var Cliente $cliente */
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
@@ -116,7 +113,6 @@ class ClienteAPIController extends AppBaseController
      */
     public function destroy($id)
     {
-        /** @var Cliente $cliente */
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
