@@ -43,3 +43,6 @@ Route::get('api/texto_iniciativa', 'TextosIniciativaController@textosIniciativa'
 Route::get('api/anexos', 'TextosIniciativaController@anexos');
 Route::get('api/texto_detalhamento_iniciativa', 'TextosDetalhamentoIniciativaController@textosDetalhamentoIniciativa');
 
+
+
+Route::resource('clientes', 'ClienteController');

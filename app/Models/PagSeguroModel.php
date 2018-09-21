@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use PagSeguro;
 
+/**
+ * Model que lida com o PagSeguro
+ * 
+ */
 class PagSeguroModel extends Model
 {
     public static function confirmaPagamento($cliente)
