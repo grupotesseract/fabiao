@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('textosCubos', 'TextosCuboController');
     Route::resource('textosIniciativas', 'TextosIniciativaController');
     Route::resource('textosDetalhamentoIniciativas', 'TextosDetalhamentoIniciativaController');
+    Route::resource('clientes', 'ClienteController');
 });
 
 // Rotas para API
@@ -44,5 +45,3 @@ Route::get('api/anexos', 'TextosIniciativaController@anexos');
 Route::get('api/texto_detalhamento_iniciativa', 'TextosDetalhamentoIniciativaController@textosDetalhamentoIniciativa');
 
 
-
-Route::resource('clientes', 'ClienteController');
