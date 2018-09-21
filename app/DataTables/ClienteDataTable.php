@@ -42,16 +42,16 @@ class ClienteDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px'])
+            ->addAction(['width' => '120px', 'title' => 'Ação'])
             ->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'create','text' => '<i class="fa fa-plus"></i> Adicionar'],
+                    ['extend' => 'reload','text' => '<i class="fa fa-refresh"></i> Atualizar'],
+                ],
+                'language' => [
+                    'url' => url('//cdn.datatables.net/plug-ins/1.10.18/i18n/Portuguese-Brasil.json')
                 ],
             ]);
     }
@@ -64,16 +64,16 @@ class ClienteDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'cep',
-            'endereco',
-            'numero',
-            'bairro',
-            'cidade',
-            'estado',
-            'email',
+            // 'cep',
+            // 'endereco',
+            // 'numero',
+            // 'bairro',
+            // 'cidade',
+            // 'estado',
             'nome',
+            'email',
             'cpf',
-            'nascimento'
+            // 'nascimento'
         ];
     }
 

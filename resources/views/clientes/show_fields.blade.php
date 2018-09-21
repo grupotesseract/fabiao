@@ -28,6 +28,12 @@
     <p>{!! $cliente->bairro !!}</p>
 </div>
 
+<!-- Bairro Field -->
+<div class="form-group">
+    {!! Form::label('bairro', 'Bairro:') !!}
+    <p>{!! $cliente->bairro !!}</p>
+</div>
+
 <!-- Cidade Field -->
 <div class="form-group">
     {!! Form::label('cidade', 'Cidade:') !!}
