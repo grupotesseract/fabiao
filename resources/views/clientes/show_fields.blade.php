@@ -4,6 +4,30 @@
     <p>{!! $cliente->id !!}</p>
 </div>
 
+<!-- Nome Field -->
+<div class="form-group">
+    {!! Form::label('nome', 'Nome:') !!}
+    <p>{!! $cliente->nome !!}</p>
+</div>
+
+<!-- Email Field -->
+<div class="form-group">
+    {!! Form::label('email', 'Email:') !!}
+    <p>{!! $cliente->email !!}</p>
+</div>
+
+<!-- Cpf Field -->
+<div class="form-group">
+    {!! Form::label('cpf', 'Cpf:') !!}
+    <p>{!! $cliente->cpf !!}</p>
+</div>
+
+<!-- Nascimento Field -->
+<div class="form-group">
+    {!! Form::label('nascimento', 'Nascimento:') !!}
+    <p>{!! $cliente->nascimento !!}</p>
+</div>
+
 <!-- Cep Field -->
 <div class="form-group">
     {!! Form::label('cep', 'Cep:') !!}
@@ -28,12 +52,6 @@
     <p>{!! $cliente->bairro !!}</p>
 </div>
 
-<!-- Bairro Field -->
-<div class="form-group">
-    {!! Form::label('bairro', 'Bairro:') !!}
-    <p>{!! $cliente->bairro !!}</p>
-</div>
-
 <!-- Cidade Field -->
 <div class="form-group">
     {!! Form::label('cidade', 'Cidade:') !!}
@@ -44,30 +62,6 @@
 <div class="form-group">
     {!! Form::label('estado', 'Estado:') !!}
     <p>{!! $cliente->estado !!}</p>
-</div>
-
-<!-- Email Field -->
-<div class="form-group">
-    {!! Form::label('email', 'Email:') !!}
-    <p>{!! $cliente->email !!}</p>
-</div>
-
-<!-- Nome Field -->
-<div class="form-group">
-    {!! Form::label('nome', 'Nome:') !!}
-    <p>{!! $cliente->nome !!}</p>
-</div>
-
-<!-- Cpf Field -->
-<div class="form-group">
-    {!! Form::label('cpf', 'Cpf:') !!}
-    <p>{!! $cliente->cpf !!}</p>
-</div>
-
-<!-- Nascimento Field -->
-<div class="form-group">
-    {!! Form::label('nascimento', 'Nascimento:') !!}
-    <p>{!! $cliente->nascimento !!}</p>
 </div>
 
 <!-- Created At Field -->
