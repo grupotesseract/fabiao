@@ -28,12 +28,6 @@
     <p>{!! $textosIniciativa->prioridade !!}</p>
 </div>
 
-<!-- Path Pdf Field -->
-<div class="form-group">
-    {!! Form::label('path_pdf', 'Path Pdf:') !!}
-    <p>{!! $textosIniciativa->path_pdf !!}</p>
-</div>
-
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
