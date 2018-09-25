@@ -27,11 +27,13 @@ return [
             'fixed' => env('APP_URL'), // Criar uma rota com este nome
         ],
         'notification' => [
-            'callback' => function ($information) { // Callable
-                \Log::debug(print_r($information, 1));
-            },
+            'callback' => ['App\Notifications\PagSeguroNotification', 'pagseguro'],
             // 'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
             'credential' => 'default', // Callable resolve credential function (notificationCode) : Credentials {}
+            // 'credential' => array(//SETA AS CREDENCIAIS DE SUA LOJA
+            //     'email' => env('PAGSEGURO_EMAIL'),
+            //     'token' => env('PAGSEGURO_TOKEN'),
+            // ),
             'fixed' => env('PAGSEGURO_NOTIFICATION'), // Criar uma rota com este nome
             // 'route-name' => 'api.pagseguro.notification',
             
