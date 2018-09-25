@@ -11,6 +11,7 @@ use App\Repositories\TextosCuboRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+Use Illuminate\Support\Facades\Storage;
 
 class TextosCuboController extends AppBaseController
 {
@@ -31,6 +32,18 @@ class TextosCuboController extends AppBaseController
     public function index(TextosCuboDataTable $textosCuboDataTable)
     {
         return $textosCuboDataTable->render('textos_cubos.index');
+    }
+
+    /**
+     * Endpoint para caminhos de Anexos
+     *
+     * @return Response
+     */
+    public function anexos($id)
+    {
+        $anexo =  'public/' . TextosCubo::find($id)->path_pdf;
+
+    	return Storage::download($anexo);
     }
 
     /**
@@ -91,6 +104,14 @@ class TextosCuboController extends AppBaseController
     public function store(CreateTextosCuboRequest $request)
     {
         $input = $request->all();
+
+        $pdf = $request->file('path_pdf');
+
+        $pdf_original_name = $pdf->getClientOriginalName();
+
+        $pdf_path = $pdf->storeAs('public', $pdf_original_name);
+
+        $input['path_pdf'] = $pdf_original_name;
 
         $textosCubo = $this->textosCuboRepository->create($input);
 
@@ -157,7 +178,17 @@ class TextosCuboController extends AppBaseController
             return redirect(route('textosCubos.index'));
         }
 
-        $textosCubo = $this->textosCuboRepository->update($request->all(), $id);
+        $input = $request->all();
+
+        $pdf = $request->file('path_pdf');
+
+        $pdf_original_name = $pdf->getClientOriginalName();
+
+        $pdf_path = $pdf->storeAs('public', $pdf_original_name);
+
+        $input['path_pdf'] = $pdf_original_name;
+
+        $textosCubo = $this->textosCuboRepository->update($input, $id);
 
         Flash::success('Textos Cubo updated successfully.');
 

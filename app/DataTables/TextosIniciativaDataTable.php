@@ -68,7 +68,6 @@ class TextosIniciativaDataTable extends DataTable
             'descritivo_pai',
             'numero',
             'prioridade',
-            'path_pdf'
         ];
     }
 

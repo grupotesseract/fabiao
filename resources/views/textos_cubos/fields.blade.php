@@ -22,6 +22,12 @@
     {!! Form::textarea('resposta_pf', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Path Pdf Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('path_pdf', 'Path Pdf:') !!}
+    {!! Form::file('path_pdf', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Valor Compra Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('valor_compra', 'Valor Compra:') !!}

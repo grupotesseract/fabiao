@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer numero
  * @property integer prioridade
  * @property integer textos_cubos_id
- * @property string path_pdf
  */
 class TextosIniciativa extends Model
 {
@@ -36,7 +35,6 @@ class TextosIniciativa extends Model
         'numero',
         'prioridade',
         'textos_cubos_id',
-        'path_pdf'
     ];
 
     /**
@@ -50,7 +48,6 @@ class TextosIniciativa extends Model
         'numero' => 'integer',
         'prioridade' => 'integer',
         'textos_cubos_id' => 'integer',
-        'path_pdf' => 'string'
     ];
 
     /**
@@ -64,7 +61,6 @@ class TextosIniciativa extends Model
         'numero' => 'required',
         'prioridade' => 'required',
         'textos_cubos_id' => 'required',
-        'path_pdf' => 'required'
     ];
 
     /**

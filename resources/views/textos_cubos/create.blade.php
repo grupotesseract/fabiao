@@ -12,7 +12,7 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'textosCubos.store']) !!}
+                    {!! Form::open(['route' => 'textosCubos.store', 'files' => true]) !!}
 
                         @include('textos_cubos.fields')
 

@@ -28,6 +28,12 @@
     <p>{!! $textosCubo->resposta_pf !!}</p>
 </div>
 
+<!-- Path Pdf Field -->
+<div class="form-group">
+    {!! Form::label('path_pdf', 'Path Pdf:') !!}
+    <a href="/api/anexos/{{ $textosCubo->id }}">{!! $textosCubo->path_pdf !!}</a>
+</div>
+
 <!-- Valor Compra Field -->
 <div class="form-group">
     {!! Form::label('valor_compra', 'Valor Compra:') !!}

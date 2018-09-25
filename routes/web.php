@@ -38,5 +38,5 @@ Route::get('api/perguntas', 'PerguntasController@perguntas');
 Route::get('api/texto_cubo', 'TextosCuboController@textosCubo');
 Route::get('api/resposta_cubo/{tipo_resposta?}', 'TextosCuboController@respostaCubo')->name('resposta_cubo');
 Route::get('api/texto_iniciativa', 'TextosIniciativaController@textosIniciativa');
-Route::get('api/anexos', 'TextosIniciativaController@anexos');
+Route::get('api/anexos/{id}', 'TextosCuboController@anexos');
 Route::get('api/texto_detalhamento_iniciativa', 'TextosDetalhamentoIniciativaController@textosDetalhamentoIniciativa');

@@ -30,7 +30,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -38,7 +37,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -46,7 +44,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -54,7 +51,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_6,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -62,7 +58,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -70,7 +65,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_1,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -78,7 +72,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Gerenciar custos e o fluxo de caixa',
@@ -86,7 +79,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '1',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_2,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -98,7 +90,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Promover melhoria de desempenho',
@@ -106,7 +97,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_6,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Promover melhoria de desempenho',
@@ -114,7 +104,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Promover melhoria de desempenho',
@@ -122,7 +111,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_1,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Promover melhoria de desempenho',
@@ -130,7 +118,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Promover melhoria de desempenho',
@@ -138,7 +125,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '2',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_2,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -150,7 +136,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Acelerar força de vendas',
@@ -158,7 +143,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Acelerar força de vendas',
@@ -166,7 +150,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Acelerar força de vendas',
@@ -174,7 +157,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_6,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Acelerar força de vendas',
@@ -182,7 +164,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Acelerar força de vendas',
@@ -190,7 +171,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '3',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -202,7 +182,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '4',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Precificar para ganho de margem ou share',
@@ -210,7 +189,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '4',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Precificar para ganho de margem ou share',
@@ -218,7 +196,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '4',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Precificar para ganho de margem ou share',
@@ -226,7 +203,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '4',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Precificar para ganho de margem ou share',
@@ -234,7 +210,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '4',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -246,7 +221,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -254,7 +228,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -262,7 +235,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -270,7 +242,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_6,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -278,7 +249,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -286,7 +256,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_1,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Revisitar a estratégia: escolher onde e como vencer',
@@ -294,7 +263,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '5',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -306,7 +274,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fidelizar os clientes chave',
@@ -314,7 +281,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fidelizar os clientes chave',
@@ -322,7 +288,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fidelizar os clientes chave',
@@ -330,7 +295,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fidelizar os clientes chave',
@@ -338,7 +302,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_1,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fidelizar os clientes chave',
@@ -346,7 +309,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '6',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -358,7 +320,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '7',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fortalecer a organização e gestão',
@@ -366,7 +327,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '7',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fortalecer a organização e gestão',
@@ -374,7 +334,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '7',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fortalecer a organização e gestão',
@@ -382,7 +341,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '7',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Fortalecer a organização e gestão',
@@ -390,7 +348,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '7',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -402,7 +359,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '8',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_5,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Desfazer-se de ativos não core',
@@ -410,7 +366,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '8',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Desfazer-se de ativos não core',
@@ -418,7 +373,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '8',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_1,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Desfazer-se de ativos não core',
@@ -426,7 +380,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '8',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_2,
-                'path_pdf' => '',
             ],
         ]);
 
@@ -438,7 +391,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_7,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Perseguir estratégias de M&A e parcerias',
@@ -446,7 +398,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_8,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Perseguir estratégias de M&A e parcerias',
@@ -454,7 +405,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '3',
                 'textos_cubos_id' => $id_cubo_6,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Perseguir estratégias de M&A e parcerias',
@@ -462,7 +412,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '1',
                 'textos_cubos_id' => $id_cubo_3,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Perseguir estratégias de M&A e parcerias',
@@ -470,7 +419,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '2',
                 'textos_cubos_id' => $id_cubo_4,
-                'path_pdf' => '',
             ],
             [
                 'descritivo' => 'Perseguir estratégias de M&A e parcerias',
@@ -478,7 +426,6 @@ class TextosIniciativaSeeder extends Seeder
                 'numero' => '9',
                 'prioridade' => '3',
                 'textos_cubos_id' => $id_cubo_2,
-                'path_pdf' => '',
             ],
         ]);
     }
