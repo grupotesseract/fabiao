@@ -53,6 +53,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Maior',
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Fraca',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -60,6 +61,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Maior',
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Fraca',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -67,6 +69,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Maior',
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Forte',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -74,6 +77,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Maior',
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Forte',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -81,6 +85,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Menor',
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Fraca',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -88,6 +93,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Menor',
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Fraca',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -95,6 +101,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Menor',
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Forte',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
             [
@@ -102,6 +109,7 @@ class TextosSeeder extends Seeder
                 'resposta_ec' => 'Menor',
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Forte',
+                'path_pdf' => '',
                 'valor_compra' => '9'
             ],
         ]);

@@ -34,6 +34,16 @@ class TextosCuboController extends AppBaseController
     }
 
     /**
+     * Endpoint para caminhos de Anexos
+     *
+     * @return Response
+     */
+    public function anexos()
+    {
+    	return response(TextosCubo::get(['path_pdf']));
+    }
+
+    /**
      * Retorna Listagem de Textos do Cubo
      *
      * @return Response
@@ -91,6 +101,14 @@ class TextosCuboController extends AppBaseController
     public function store(CreateTextosCuboRequest $request)
     {
         $input = $request->all();
+
+        $pdf = $request->file('path_pdf');
+
+        $pdf_original_name = $pdf->getClientOriginalName();
+
+        $pdf_path = $pdf->storeAs('pdfs_cubo', $pdf_original_name);
+
+        $input['path_pdf'] = $pdf_path;
 
         $textosCubo = $this->textosCuboRepository->create($input);
 
@@ -157,7 +175,17 @@ class TextosCuboController extends AppBaseController
             return redirect(route('textosCubos.index'));
         }
 
-        $textosCubo = $this->textosCuboRepository->update($request->all(), $id);
+        $input = $request->all();
+
+        $pdf = $request->file('path_pdf');
+
+        $pdf_original_name = $pdf->getClientOriginalName();
+
+        $pdf_path = $pdf->storeAs('pdfs_cubo', $pdf_original_name);
+
+        $input['path_pdf'] = $pdf_path;
+
+        $textosCubo = $this->textosCuboRepository->update($input, $id);
 
         Flash::success('Textos Cubo updated successfully.');
 

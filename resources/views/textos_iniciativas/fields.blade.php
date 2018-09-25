@@ -28,12 +28,6 @@
     {!! Form::text('textos_cubos_id', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Path Pdf Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('path_pdf', 'Path Pdf:') !!}
-    {!! Form::text('path_pdf', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
