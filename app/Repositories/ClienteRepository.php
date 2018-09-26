@@ -29,7 +29,8 @@ class ClienteRepository extends BaseRepository
         'email',
         'nome',
         'cpf',
-        'nascimento'
+        'nascimento',
+        'itemId',
     ];
 
     /**

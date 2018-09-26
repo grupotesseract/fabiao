@@ -18,15 +18,16 @@ class PagSeguroModel extends Model
         $data = [
             'items' => [
                 [
-                    'id' => '1',
+                    'id' => $cliente->itemId,
+                    // 'id' => '2',
                     'description' => '3D - Posicionamento estratégico',
                     'quantity' => '1',
-                    'amount' => '2.0'
+                    'amount' => '1.00',
                 ],
             ],
             'shipping' => [
                 'address' => [
-                    'postalCode' => $cliente['cep'],
+                    'postalCode' => $cliente->cep,
                     'street' => $cliente->endereco,
                     'number' => $cliente->numero,
                     'district' => $cliente->bairro,

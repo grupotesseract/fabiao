@@ -28,15 +28,9 @@ return [
         ],
         'notification' => [
             'callback' => ['App\Notifications\PagSeguroNotification', 'pagseguro'],
-            // 'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
             'credential' => 'default', // Callable resolve credential function (notificationCode) : Credentials {}
-            // 'credential' => array(//SETA AS CREDENCIAIS DE SUA LOJA
-            //     'email' => env('PAGSEGURO_EMAIL'),
-            //     'token' => env('PAGSEGURO_TOKEN'),
-            // ),
             'fixed' => env('PAGSEGURO_NOTIFICATION'), // Criar uma rota com este nome
             // 'route-name' => 'api.pagseguro.notification',
-            
         ],
     ],
 

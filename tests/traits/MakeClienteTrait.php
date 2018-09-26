@@ -42,6 +42,7 @@ trait MakeClienteTrait
         $fake = Faker::create();
 
         return array_merge([
+            'itemId' => $fake->word,
             'cep' => $fake->word,
             'endereco' => $fake->word,
             'numero' => $fake->word,

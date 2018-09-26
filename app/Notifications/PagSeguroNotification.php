@@ -7,9 +7,9 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class PagSeguroNotification  extends Notification
+class PagSeguroNotification extends Notification
 {
-    // use Queueable;
+    use Queueable;
 
     /**
      * Create a new notification instance.
@@ -59,6 +59,12 @@ class PagSeguroNotification  extends Notification
         ];
     }
 
+    /**
+     * Callback de notificação do PagSeguro
+     *
+     * @param [type] $information
+     * @return void
+     */
     public static function pagseguro($information) 
     {
         foreach ($information->getItems() as $item) {

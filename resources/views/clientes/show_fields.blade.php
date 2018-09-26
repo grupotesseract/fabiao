@@ -10,6 +10,12 @@
     <p>{!! $cliente->email !!}</p>
 </div>
 
+<!-- itemId Field -->
+<div class="form-group">
+    {!! Form::label('Item Id', 'Item id:') !!}
+    <p>{!! $cliente->itemId !!}</p>
+</div>
+
 <!-- Cpf Field -->
 <div class="form-group">
     {!! Form::label('cpf', 'Cpf:') !!}

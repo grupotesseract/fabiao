@@ -16,6 +16,12 @@
     {!! Form::text('cpf', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- itemId Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Item Id', 'Item Id:') !!}
+    {!! Form::text('itemId', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Nascimento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nascimento', 'Nascimento:') !!}
