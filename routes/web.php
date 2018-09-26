@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin'], function () {
 // Rotas para API
 Route::get('api/texto_entrada', 'TextoEntradaController@textoEntrada');
 Route::get('api/perguntas', 'PerguntasController@perguntas');
-Route::get('api/texto_cubo', 'TextosCuboController@textosCubo');
+Route::get('api/texto_cubo', 'TextosCuboController@textosCubo')->name('texto_cubo');
 Route::get('api/resposta_cubo/{tipo_resposta?}', 'TextosCuboController@respostaCubo')->name('resposta_cubo');
 Route::get('api/texto_iniciativa', 'TextosIniciativaController@textosIniciativa');
 Route::get('api/anexos/{id}', 'TextosCuboController@anexos');

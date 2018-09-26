@@ -43,7 +43,7 @@ class TextosCuboController extends AppBaseController
     {
         $anexo =  'public/' . TextosCubo::find($id)->path_pdf;
 
-    	return Storage::download($anexo);
+        return Storage::download($anexo);
     }
 
     /**
@@ -53,35 +53,36 @@ class TextosCuboController extends AppBaseController
      */
     public function textosCubo()
     {
-    	return response(TextosCubo::with('textosIniciativa')->get());
+        return response(TextosCubo::with('textosIniciativa')->get());
     }
 
     /**
      * Retorna Listagem de resposta do Cubo
      *
-     * @param tipo_resposta onde 
-     * crise = reposta para exposição a crise,
-     * estrategico = reposta para posicionamento estrategico
-     * posicao = reposta para posição financeira
+     * @JSON respostas - String de um JSON contendo valores 
+     * das respostas selecionadas pelo usuário
      *
-     * @return Response
+     * @return Resposta do cubo correspondente à combinação de perguntas recebida
+     * Redireciona para os textos do Cubo caso o JSON não seja válido
      */
-    public function respostaCubo($tipo_resposta = 'crise')
+    public function respostaCubo(String $respostas)
     {
-	$param_response = [
-		'crise'       => 'resposta_ec',
-		'estrategico' => 'resposta_pe',
-		'posicao'     => 'resposta_pf',
-	];
+        try {
+            $json = json_decode($respostas);
 
-	try {
-		$resposta = $param_response[$tipo_resposta];
+            $respostas_condition = [
+                ['resposta_ec', 'ilike',  $json->resposta_ec],
+                ['resposta_pe', 'ilike',  $json->resposta_pe],
+                ['resposta_pf', 'ilike',  $json->resposta_pf],
+            ];
 
-		return response(TextosCubo::get([$resposta]));
-		
-	} catch (\Throwable $e) {
-		return redirect()->route('resposta_cubo');
-	}
+            $resposta = TextosCubo::where($respostas_condition)->first();
+
+            return response($resposta);
+
+        } catch (\Throwable $e) {
+            return redirect()->route('texto_cubo');
+        }
     }
 
     /**
