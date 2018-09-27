@@ -22,6 +22,12 @@
     {!! Form::text('itemId', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- preco Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Preço', 'Preço:') !!}
+    {!! Form::text('preco', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Nascimento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nascimento', 'Nascimento:') !!}

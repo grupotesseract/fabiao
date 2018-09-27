@@ -43,6 +43,7 @@ trait MakeClienteTrait
 
         return array_merge([
             'itemId' => $fake->word,
+            'preco' => $fake->word,
             'cep' => $fake->word,
             'endereco' => $fake->word,
             'numero' => $fake->word,

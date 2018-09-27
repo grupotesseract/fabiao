@@ -16,6 +16,12 @@
     <p>{!! $cliente->itemId !!}</p>
 </div>
 
+<!-- preco' Field -->
+<div class="form-group">
+    {!! Form::label('Preço', 'Preço:') !!}
+    <p>{!! $cliente->preco !!}</p>
+</div>
+
 <!-- Cpf Field -->
 <div class="form-group">
     {!! Form::label('cpf', 'Cpf:') !!}

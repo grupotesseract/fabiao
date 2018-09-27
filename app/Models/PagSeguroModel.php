@@ -19,10 +19,9 @@ class PagSeguroModel extends Model
             'items' => [
                 [
                     'id' => $cliente->itemId,
-                    // 'id' => '2',
                     'description' => '3D - Posicionamento estratégico',
                     'quantity' => '1',
-                    'amount' => '1.00',
+                    'amount' => $cliente->preco,
                 ],
             ],
             'shipping' => [

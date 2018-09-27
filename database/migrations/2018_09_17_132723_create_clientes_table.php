@@ -17,6 +17,7 @@ class CreateClientesTable extends Migration
             $table->increments('id');
             $table->string('cep');
             $table->string('itemId');
+            $table->string('preco');
             $table->string('endereco');
             $table->string('numero');
             $table->string('bairro');

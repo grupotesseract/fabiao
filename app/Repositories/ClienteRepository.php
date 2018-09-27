@@ -31,6 +31,7 @@ class ClienteRepository extends BaseRepository
         'cpf',
         'nascimento',
         'itemId',
+        'preco',
     ];
 
     /**
