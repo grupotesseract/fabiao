@@ -11,7 +11,8 @@ use App\Repositories\TextosCuboRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
-Use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class TextosCuboController extends AppBaseController
 {
@@ -65,15 +66,15 @@ class TextosCuboController extends AppBaseController
      * @return Resposta do cubo correspondente à combinação de perguntas recebida
      * Redireciona para os textos do Cubo caso o JSON não seja válido
      */
-    public function respostaCubo(String $respostas)
+    public function respostaCubo(Request $request)
     {
         try {
-            $json = json_decode($respostas);
+            $json = $request->json()->all();
 
             $respostas_condition = [
-                ['resposta_ec', 'ilike',  $json->resposta_ec],
-                ['resposta_pe', 'ilike',  $json->resposta_pe],
-                ['resposta_pf', 'ilike',  $json->resposta_pf],
+                ['resposta_ec', 'ilike',  $json['resposta_ec']],
+                ['resposta_pe', 'ilike',  $json['resposta_pe']],
+                ['resposta_pf', 'ilike',  $json['resposta_pf']],
             ];
 
             $resposta = TextosCubo::where($respostas_condition)->first();

@@ -21,13 +21,8 @@ class TextosIniciativa extends Model
     use SoftDeletes;
 
     public $table = 'textos_iniciativas';
-    
 
     protected $dates = ['deleted_at'];
-
-
-    protected $hidden = ['textos_cubos_id'];
-
 
     public $fillable = [
         'descritivo',
@@ -68,9 +63,9 @@ class TextosIniciativa extends Model
      *
      * @return void
      */
-    public function cubo()
+    public function filhos()
     {
-    	return $this->belongsTo('App\Models\TextosCubo', 'textos_cubos_id');
+    	return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'id');
     }
     
 

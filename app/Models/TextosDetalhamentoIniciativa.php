@@ -48,5 +48,11 @@ class TextosDetalhamentoIniciativa extends Model
         'texto_iniciativa_id' => 'required'
     ];
 
+    public function pai()
+    {
+        return $this->belongsTo('App\Models\TextosIniciativa', 'texto_iniciativa_id');
+    }
+    
+
     
 }

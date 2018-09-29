@@ -38,9 +38,9 @@ class TextosIniciativaController extends AppBaseController
      *
      * @return Response
      */
-    public function textosIniciativa()
+    public function textosIniciativa($id_resposta_cubo)
     {
-    	return response(TextosIniciativa::with('cubo')->get());
+    	return response(TextosIniciativa::where('textos_cubos_id', $id_resposta_cubo)->with('filhos')->get());
     }
 
     /**
