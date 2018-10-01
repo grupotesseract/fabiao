@@ -68,6 +68,7 @@ class TextosCuboDataTable extends DataTable
             'resposta_ec',
             'resposta_pe',
             'resposta_pf',
+            'path_pdf',
             'valor_compra'
         ];
     }

@@ -19,6 +19,7 @@ class CreateTextosCubosTable extends Migration
             $table->text('resposta_ec');
             $table->text('resposta_pe');
             $table->text('resposta_pf');
+            $table->text('path_pdf');
             $table->integer('valor_compra');
             $table->timestamps();
             $table->softDeletes();

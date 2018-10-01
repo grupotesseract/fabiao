@@ -13,7 +13,13 @@
 <!-- Password Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Senha:') !!}
-    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+    {!! Form::password('password', ['class' => 'form-control']) !!}
+</div>
+
+<!-- Password Confirmation Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('password_confirmation', 'Repita a Senha:') !!}
+    {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

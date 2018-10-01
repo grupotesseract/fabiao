@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TextoPosicionamentoEstrategico;
 use App\DataTables\TextoPosicionamentoEstrategicoDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextoPosicionamentoEstrategicoRequest;
@@ -31,16 +30,6 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
     public function index(TextoPosicionamentoEstrategicoDataTable $textoPosicionamentoEstrategicoDataTable)
     {
         return $textoPosicionamentoEstrategicoDataTable->render('texto_posicionamento_estrategicos.index');
-    }
-
-    /**
-     * Retorna Listagem de Textos de Posicionamento Estratégico
-     *
-     * @return Response
-     */
-    public function textoPosicionamentoEstrategico()
-    {
-    	return response(TextoPosicionamentoEstrategico::get());
     }
 
     /**

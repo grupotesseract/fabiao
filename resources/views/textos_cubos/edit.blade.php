@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($textosCubo, ['route' => ['textosCubos.update', $textosCubo->id], 'method' => 'patch']) !!}
+                   {!! Form::model($textosCubo, ['route' => ['textosCubos.update', $textosCubo->id], 'method' => 'patch', 'files' => true]) !!}
 
                         @include('textos_cubos.fields')
 

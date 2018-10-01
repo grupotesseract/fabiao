@@ -15,20 +15,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer numero
  * @property integer prioridade
  * @property integer textos_cubos_id
- * @property string path_pdf
  */
 class TextosIniciativa extends Model
 {
     use SoftDeletes;
 
     public $table = 'textos_iniciativas';
-    
 
     protected $dates = ['deleted_at'];
 
-
-    protected $hidden = ['textos_cubos_id'];
-
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
 
     public $fillable = [
         'descritivo',
@@ -36,7 +32,6 @@ class TextosIniciativa extends Model
         'numero',
         'prioridade',
         'textos_cubos_id',
-        'path_pdf'
     ];
 
     /**
@@ -50,7 +45,6 @@ class TextosIniciativa extends Model
         'numero' => 'integer',
         'prioridade' => 'integer',
         'textos_cubos_id' => 'integer',
-        'path_pdf' => 'string'
     ];
 
     /**
@@ -63,18 +57,16 @@ class TextosIniciativa extends Model
         'descritivo_pai' => 'required',
         'numero' => 'required',
         'prioridade' => 'required',
-        'textos_cubos_id' => 'required',
-        'path_pdf' => 'required'
     ];
 
     /**
-     * relacionamento p/ retornar cubo
+     * relacionamento p/ retornar filhos
      *
      * @return void
      */
-    public function cubo()
+    public function subitems()
     {
-    	return $this->belongsTo('App\Models\TextosCubo', 'textos_cubos_id');
+    	return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'texto_iniciativa_id');
     }
     
 

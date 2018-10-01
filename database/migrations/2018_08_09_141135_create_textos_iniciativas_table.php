@@ -20,7 +20,6 @@ class CreateTextosIniciativasTable extends Migration
             $table->integer('numero');
             $table->integer('prioridade');
             $table->integer('textos_cubos_id')->unsigned();
-            $table->text('path_pdf');
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('textos_cubos_id')->references('id')->on('textos_cubos');

@@ -34,26 +34,6 @@ class TextosIniciativaController extends AppBaseController
     }
 
     /**
-     * Endpoint para caminhos de Anexos
-     *
-     * @return Response
-     */
-    public function anexos()
-    {
-    	return response(TextosIniciativa::get(['path_pdf']));
-    }
-
-    /**
-     * Retorna Listagem de Textos de Iniciativa
-     *
-     * @return Response
-     */
-    public function textosIniciativa()
-    {
-    	return response(TextosIniciativa::with('cubo')->get());
-    }
-
-    /**
      * Show the form for creating a new TextosIniciativa.
      *
      * @return Response

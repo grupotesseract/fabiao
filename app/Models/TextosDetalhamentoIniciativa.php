@@ -19,6 +19,7 @@ class TextosDetalhamentoIniciativa extends Model
 
     public $table = 'textos_detalhamento_iniciativas';
     
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
 
     protected $dates = ['deleted_at'];
 
@@ -45,8 +46,5 @@ class TextosDetalhamentoIniciativa extends Model
      */
     public static $rules = [
         'descritivo' => 'required',
-        'texto_iniciativa_id' => 'required'
     ];
-
-    
 }

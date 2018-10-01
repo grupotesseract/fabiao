@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string resposta_ec
  * @property string resposta_pe
  * @property string resposta_pf
+ * @property string path_pdf
  * @property integer valor_compra
  */
 class TextosCubo extends Model
@@ -21,16 +22,17 @@ class TextosCubo extends Model
     use SoftDeletes;
 
     public $table = 'textos_cubos';
-    
+
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
 
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'descritivo',
         'resposta_ec',
         'resposta_pe',
         'resposta_pf',
+        'path_pdf',
         'valor_compra'
     ];
 
@@ -44,6 +46,7 @@ class TextosCubo extends Model
         'resposta_ec' => 'string',
         'resposta_pe' => 'string',
         'resposta_pf' => 'string',
+        'path_pdf' => 'string',
         'valor_compra' => 'integer'
     ];
 
@@ -57,6 +60,7 @@ class TextosCubo extends Model
         'resposta_ec' => 'required',
         'resposta_pe' => 'required',
         'resposta_pf' => 'required',
+        'path_pdf' => 'required',
         'valor_compra' => 'required'
     ];
 
@@ -67,9 +71,9 @@ class TextosCubo extends Model
      */
     public function textosIniciativa()
     {
-	return $this->hasMany('App\Models\TextosIniciativa', 'id');
+        return $this->hasMany('App\Models\TextosIniciativa', 'textos_cubos_id');
     }
-    
 
-    
+
+
 }
