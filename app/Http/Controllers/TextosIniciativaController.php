@@ -34,16 +34,6 @@ class TextosIniciativaController extends AppBaseController
     }
 
     /**
-     * Retorna Listagem de Textos de Iniciativa
-     *
-     * @return Response
-     */
-    public function textosIniciativa($id_resposta_cubo)
-    {
-    	return response(TextosIniciativa::where('textos_cubos_id', $id_resposta_cubo)->with('filhos')->get());
-    }
-
-    /**
      * Show the form for creating a new TextosIniciativa.
      *
      * @return Response

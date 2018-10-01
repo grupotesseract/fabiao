@@ -23,9 +23,9 @@ class TextosCubo extends Model
 
     public $table = 'textos_cubos';
 
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
 
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'descritivo',
@@ -71,7 +71,7 @@ class TextosCubo extends Model
      */
     public function textosIniciativa()
     {
-        return $this->hasMany('App\Models\TextosIniciativa', 'id');
+        return $this->hasMany('App\Models\TextosIniciativa', 'textos_cubos_id');
     }
 
 
