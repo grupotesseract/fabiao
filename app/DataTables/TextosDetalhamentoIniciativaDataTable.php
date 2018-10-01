@@ -65,7 +65,6 @@ class TextosDetalhamentoIniciativaDataTable extends DataTable
     {
         return [
             'descritivo',
-            'texto_iniciativa_id'
         ];
     }
 

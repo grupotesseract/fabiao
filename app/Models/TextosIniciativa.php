@@ -24,6 +24,8 @@ class TextosIniciativa extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
+
     public $fillable = [
         'descritivo',
         'descritivo_pai',
@@ -55,17 +57,16 @@ class TextosIniciativa extends Model
         'descritivo_pai' => 'required',
         'numero' => 'required',
         'prioridade' => 'required',
-        'textos_cubos_id' => 'required',
     ];
 
     /**
-     * relacionamento p/ retornar cubo
+     * relacionamento p/ retornar filhos
      *
      * @return void
      */
-    public function filhos()
+    public function subitems()
     {
-    	return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'id');
+    	return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'texto_iniciativa_id');
     }
     
 

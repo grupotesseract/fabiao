@@ -77,7 +77,7 @@ class TextosCuboController extends AppBaseController
                 ['resposta_pf', 'ilike',  $json['resposta_pf']],
             ];
 
-            $resposta = TextosCubo::where($respostas_condition)->first();
+            $resposta = TextosCubo::where($respostas_condition)->with('textosIniciativa.subitems')->first();
 
             return response($resposta);
 

@@ -34,16 +34,6 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
     }
 
     /**
-     * Retorna Listagem de Textos de Detalhamento de Iniciativa
-     *
-     * @return Response
-     */
-    public function textosDetalhamentoIniciativa()
-    {
-    	return response(TextosDetalhamentoIniciativa::get());
-    }
-
-    /**
      * Show the form for creating a new TextosDetalhamentoIniciativa.
      *
      * @return Response
