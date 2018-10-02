@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TextosIniciativa;
+use App\Models\TextosCubo;
 use App\DataTables\TextosIniciativaDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextosIniciativaRequest;
@@ -92,13 +93,15 @@ class TextosIniciativaController extends AppBaseController
     {
         $textosIniciativa = $this->textosIniciativaRepository->findWithoutFail($id);
 
+        $textosCubo =  TextosCubo::get(['descritivo', 'id']);
+
         if (empty($textosIniciativa)) {
             Flash::error('Textos Iniciativa not found');
 
             return redirect(route('textosIniciativas.index'));
         }
 
-        return view('textos_iniciativas.edit')->with('textosIniciativa', $textosIniciativa);
+        return view('textos_iniciativas.edit')->with(compact('textosIniciativa', 'textosCubo'));
     }
 
     /**
