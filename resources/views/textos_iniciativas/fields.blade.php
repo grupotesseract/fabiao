@@ -22,7 +22,7 @@
     {!! Form::number('prioridade', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Prioridade Field -->
+<!-- Descritivo Cubo Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('textos_cubos_id', 'Descritivo Cubo:') !!}
     {!! Form::select('textos_cubos_id', $textosCubo->pluck('descritivo', 'id'), $textosIniciativa->textos_cubos_id, ['class' => 'form-control']) !!}
