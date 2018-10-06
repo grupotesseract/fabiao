@@ -38,4 +38,7 @@ Route::get('api/texto_entrada', 'TextoEntradaController@textoEntrada');
 Route::get('api/perguntas', 'PerguntasController@perguntas');
 Route::get('api/texto_cubo', 'TextosCuboController@textosCubo')->name('texto_cubo');
 Route::get('api/anexos/{id}', 'TextosCuboController@anexos');
+Route::get('api/analise/agradecimento', 'TextosCuboController@enviarAnexo');
+
 Route::post('api/resposta_cubo/', 'TextosCuboController@respostaCubo')->name('resposta_cubo');
+Route::post('api/cliente/', 'ClienteController@store');

@@ -57,7 +57,7 @@ class ClienteController extends AppBaseController
 
         Flash::success('Cliente saved successfully.');
 
-        return redirect(route('clientes.index'));
+        return response($cliente);
     }
 
     /**

@@ -6,10 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use PagSeguro;
 
-/**
- * Model que lida com o PagSeguro
- * 
- */
 class PagSeguroModel extends Model
 {
     public static function confirmaPagamento($cliente)
@@ -51,12 +47,12 @@ class PagSeguroModel extends Model
         ];
 
         $checkout = PagSeguro::checkout()->createFromArray($data);
-        
+
         $credentials = PagSeguro::credentials()->get();
 
-        $information = $checkout->send($credentials); // Retorna um objeto de laravel\pagseguro\Checkout\Information\Information
-        
-        return response($information->getLink(), 200);
+        $pagSeguroInformation = $checkout->send($credentials); 
+
+        return response($pagSeguroInformation->getLink(), 200);
 
     }
 }

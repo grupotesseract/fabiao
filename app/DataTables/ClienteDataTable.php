@@ -47,7 +47,6 @@ class ClienteDataTable extends DataTable
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
-                    ['extend' => 'create','text' => '<i class="fa fa-plus"></i> Adicionar'],
                     ['extend' => 'reload','text' => '<i class="fa fa-refresh"></i> Atualizar'],
                 ],
                 'language' => [
@@ -64,16 +63,9 @@ class ClienteDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            // 'cep',
-            // 'endereco',
-            // 'numero',
-            // 'bairro',
-            // 'cidade',
-            // 'estado',
             'nome',
             'email',
             'cpf',
-            // 'nascimento'
         ];
     }
 

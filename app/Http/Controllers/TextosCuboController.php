@@ -47,6 +47,13 @@ class TextosCuboController extends AppBaseController
         return Storage::download($anexo);
     }
 
+    public function enviarAnexo(Request $request)
+    {
+        $input = $request->all();
+
+        return response($input);
+    }
+
     /**
      * Retorna Listagem de Textos do Cubo
      *
