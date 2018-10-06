@@ -50,7 +50,7 @@ class PagSeguroModel extends Model
 
         $credentials = PagSeguro::credentials()->get();
 
-        $pagSeguroInformation = $checkout->send($credentials); 
+        $pagSeguroInformation = $checkout->send($credentials);
 
         return response($pagSeguroInformation->getLink(), 200);
 
