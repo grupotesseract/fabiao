@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Mail;
+use App\Models\TextosCubo;
 
 class PagSeguroNotification extends Notification
 {
@@ -65,10 +67,56 @@ class PagSeguroNotification extends Notification
      * @param [type] $information
      * @return void
      */
-    public static function pagseguro($information) 
+    public static function pagseguro($information)
     {
-        foreach ($information->getItems() as $item) {
-            \Log::debug(print_r($item->getId(), 1));
+        $response = PagSeguroNotification::setResponse($information);
+
+        $pagou = $response['status_transacao'] == 'paga';
+
+        if ($pagou) {
+            $id_cubo = $response['id_cubo'];
+            $name = $response['name'];
+            $email = $response['email'];
+            $anexo_path = 'public/' . TextosCubo::find($id_cubo)->path_pdf;
+
+            /* Mail::send(['text' => 'email_anexo'], ['name', '3D Financial Academy'], function($message) { */
+            /*     $message->to($email, "Para $name")->subject('Posicionamento Estratégico - Conteúdo'); */
+            /*     $message->from('grupotesseract_tmp@grupotesseract.com.br', '3D Financial Academy'); */
+            /*     $message->attach($anexo_path, [ */
+            /*         'as' => 'posicionamento-estrategico.pdf', */ 
+            /*         'mime' => 'application/pdf' */ 
+            /*     ]); */
+            /* }); */
+
+            \Log::info('Anexo : ' . $anexo_path);
+            \Log::info('Enviado para : ' . $email);
+        } else {
+            \Log::error('Erro no envio de anexos. Informações da transação:');
+            \Log::error($response);
         }
     }
+
+    public static function setResponse($information)
+    {
+
+        $status_transacao = strtolower($information->getStatus()->getName());
+        $sender = $information->getSender();
+        $email = $sender->getEmail();
+        $name = $sender->getName();
+
+        $response = [
+            'status_transacao' => $status_transacao,
+            'email' => $email,
+            'name' => $name,
+        ];
+
+        foreach ($information->getItems() as $item) {
+            $id_cubo = $item->getId();
+            $response['id_cubo'] = $id_cubo;
+        }
+
+        \Log::info($response);
+        return $response;
+    }
+
 }

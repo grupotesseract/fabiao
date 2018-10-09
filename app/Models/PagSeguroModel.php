@@ -15,7 +15,7 @@ class PagSeguroModel extends Model
             'items' => [
                 [
                     'id' => $cliente->itemId,
-                    'description' => '3D - Posicionamento estratégico',
+                    'description' => '3D - Posicionamento Estratégico',
                     'quantity' => '1',
                     'amount' => $cliente->preco,
                 ],
@@ -52,7 +52,6 @@ class PagSeguroModel extends Model
 
         $pagSeguroInformation = $checkout->send($credentials);
 
-        return response($pagSeguroInformation->getLink(), 200);
-
+        return redirect($pagSeguroInformation->getLink();
     }
 }

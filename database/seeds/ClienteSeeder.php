@@ -23,7 +23,7 @@ class ClienteSeeder extends Seeder
             'estado' => 'AM',
             'email' => 'alextester@terra.com.br',
             'nome' => 'Alex Noronha',
-            'cpf' => '35654735845',
+            'cpf' => '73017806057',
             'nascimento' => '21/01/1975'
         ]);
 
