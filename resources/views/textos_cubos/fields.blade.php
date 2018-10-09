@@ -24,7 +24,7 @@
 
 <!-- Path Pdf Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('path_pdf', 'Path Pdf:') !!}
+    {!! Form::label('path_pdf', 'Arquivo PDF:') !!}
     {!! Form::file('path_pdf', null, ['class' => 'form-control']) !!}
 </div>
 

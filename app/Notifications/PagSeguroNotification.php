@@ -77,16 +77,16 @@ class PagSeguroNotification extends Notification
             $id_cubo = $response['id_cubo'];
             $name = $response['name'];
             $email = $response['email'];
-            $anexo_path = 'public/' . TextosCubo::find($id_cubo)->path_pdf;
 
-            /* Mail::send(['text' => 'email_anexo'], ['name', '3D Financial Academy'], function($message) { */
-            /*     $message->to($email, "Para $name")->subject('Posicionamento Estratégico - Conteúdo'); */
-            /*     $message->from('grupotesseract_tmp@grupotesseract.com.br', '3D Financial Academy'); */
-            /*     $message->attach($anexo_path, [ */
-            /*         'as' => 'posicionamento-estrategico.pdf', */ 
-            /*         'mime' => 'application/pdf' */ 
-            /*     ]); */
-            /* }); */
+            $anexo_path = base_path('storage/app/public/' . TextosCubo::find($id_cubo)->path_pdf);
+
+            Mail::send(['text' => 'email_anexo'], ['name', '3D Financial Academy'], function($message) use ($email, $name, $anexo_path) {
+                $message->to($email, "Para $name")->subject('Posicionamento Estratégico - Conteúdo');
+                $message->from('3dfinancialacademy@gmail.com', '3D Financial Academy');
+                $message->attach($anexo_path, [
+                    'mime' => 'application/pdf' 
+                ]);
+            });
 
             \Log::info('Anexo : ' . $anexo_path);
             \Log::info('Enviado para : ' . $email);
@@ -115,7 +115,6 @@ class PagSeguroNotification extends Notification
             $response['id_cubo'] = $id_cubo;
         }
 
-        \Log::info($response);
         return $response;
     }
 
