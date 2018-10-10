@@ -38,3 +38,7 @@
     <a href="{!! route('textosDetalhamentoIniciativas.index') !!}">Detalhamento Iniciativa</a>
 </li>
 
+<li class="{{ Request::is('clientes*') ? 'active' : '' }}">
+    <a href="{!! route('clientes.index') !!}">Clientes</a>
+</li>
+

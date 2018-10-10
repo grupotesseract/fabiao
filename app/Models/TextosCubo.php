@@ -60,7 +60,7 @@ class TextosCubo extends Model
         'resposta_ec' => 'required',
         'resposta_pe' => 'required',
         'resposta_pf' => 'required',
-        'path_pdf' => 'required',
+        'path_pdf' => 'required | mimes:pdf',
         'valor_compra' => 'required'
     ];
 

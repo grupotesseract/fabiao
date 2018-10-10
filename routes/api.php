@@ -18,3 +18,13 @@ Route::prefix('admin')->group(function () {
         return $request->user();
     });
 });
+
+Route::post('pagseguro', 'ClienteAPIController@pagamento');
+
+Route::post('/pagseguro/notification', [
+    'uses' => '\laravel\pagseguro\Platform\Laravel5\NotificationController@notification',
+    'as' => 'pagseguro.notification',
+]);
+
+Route::resource('cliente', 'ClienteAPIController');
+

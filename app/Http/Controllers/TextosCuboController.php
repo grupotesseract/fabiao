@@ -42,9 +42,16 @@ class TextosCuboController extends AppBaseController
      */
     public function anexos($id)
     {
-        $anexo =  'public/' . TextosCubo::find($id)->path_pdf;
+        $anexo = 'public/' . TextosCubo::find($id)->path_pdf;
 
         return Storage::download($anexo);
+    }
+
+    public function enviarAnexo(Request $request)
+    {
+        $input = $request->all();
+
+        return response($input);
     }
 
     /**
@@ -60,7 +67,7 @@ class TextosCuboController extends AppBaseController
     /**
      * Retorna Listagem de resposta do Cubo
      *
-     * @JSON respostas - String de um JSON contendo valores 
+     * @JSON respostas - String de um JSON contendo valores
      * das respostas selecionadas pelo usuário
      *
      * @return Resposta do cubo correspondente à combinação de perguntas recebida
