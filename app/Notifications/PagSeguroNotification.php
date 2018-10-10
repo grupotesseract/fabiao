@@ -82,9 +82,9 @@ class PagSeguroNotification extends Notification
 
             Mail::send(['text' => 'email_anexo'], ['name', '3D Financial Academy'], function($message) use ($email, $name, $anexo_path) {
                 $message->to($email, "Para $name")->subject('Posicionamento Estratégico - Conteúdo');
-                $message->from('3dfinancialacademy@gmail.com', '3D Financial Academy');
+                $message->from('3dfinancialacademy@grupotesseract.com.br', '3D Financial Academy');
                 $message->attach($anexo_path, [
-                    'mime' => 'application/pdf' 
+                    'mime' => 'application/pdf'
                 ]);
             });
 
