@@ -5,21 +5,21 @@
 </div>
 
 <!-- Resposta Ec Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-4 col-lg-4">
     {!! Form::label('resposta_ec', 'Resposta Ec:') !!}
-    {!! Form::textarea('resposta_ec', null, ['class' => 'form-control']) !!}
+    {!! Form::select('resposta_ec', $textosCubo->pluck('resposta_ec', 'resposta_ec'), $textosCubo->resposta_ec, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Resposta Pe Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-4 col-lg-4">
     {!! Form::label('resposta_pe', 'Resposta Pe:') !!}
-    {!! Form::textarea('resposta_pe', null, ['class' => 'form-control']) !!}
+    {!! Form::select('resposta_pe', $textosCubo->pluck('resposta_pe', 'resposta_pe'), $textosCubo->resposta_pe, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Resposta Pf Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-4 col-lg-4">
     {!! Form::label('resposta_pf', 'Resposta Pf:') !!}
-    {!! Form::textarea('resposta_pf', null, ['class' => 'form-control']) !!}
+    {!! Form::select('resposta_pf', $textosCubo->pluck('resposta_pf', 'resposta_pf'), $textosCubo->resposta_pf, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Path Pdf Field -->
