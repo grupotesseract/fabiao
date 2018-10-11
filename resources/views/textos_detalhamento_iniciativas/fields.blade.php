@@ -1,7 +1,7 @@
 <!-- Descritivo Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('descritivo', 'Descritivo:') !!}
-    {!! Form::textarea('descritivo', null, ['class' => 'form-control']) !!}
+    {!! Form::select('descritivo', $textosDetalhamentoIniciativa->groupBy('descritivo')->pluck('descritivo', 'descritivo'), $textosDetalhamentoIniciativa->descritivo, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
