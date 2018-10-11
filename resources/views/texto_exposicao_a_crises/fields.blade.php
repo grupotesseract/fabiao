@@ -7,13 +7,13 @@
 <!-- Texto Resposta 1 Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('texto_resposta_1', 'Texto Resposta 1:') !!}
-    {!! Form::textarea('texto_resposta_1', null, ['class' => 'form-control']) !!}
+    {!! Form::select('texto_resposta_1', $textoExposicaoACrise->groupBy('texto_resposta_1')->pluck('texto_resposta_1', 'texto_resposta_1'), $textoExposicaoACrise->texto_resposta_1, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Texto Resposta 2 Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('texto_resposta_2', 'Texto Resposta 2:') !!}
-    {!! Form::textarea('texto_resposta_2', null, ['class' => 'form-control']) !!}
+    {!! Form::select('texto_resposta_2', $textoExposicaoACrise->groupBy('texto_resposta_2')->pluck('texto_resposta_2', 'texto_resposta_2'), $textoExposicaoACrise->texto_resposta_2, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Descritivo Resposta 1 Field -->
