@@ -54,7 +54,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Fraca',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'S.O.S',
@@ -62,7 +62,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Fraca',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Ampliar liderança',
@@ -70,7 +70,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Forte',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Atravessar com cuidado',
@@ -78,7 +78,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Forte',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Livrar-se do peso extra',
@@ -86,7 +86,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Fraca',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Reencontrar o foco',
@@ -94,7 +94,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Fraca',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Seguir em velocidade máxima',
@@ -102,7 +102,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Forte',
                 'resposta_pf' => 'Forte',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
             [
                 'descritivo' => 'Ultrapassar os tímidos',
@@ -110,7 +110,7 @@ class TextosSeeder extends Seeder
                 'resposta_pe' => 'Fraco',
                 'resposta_pf' => 'Forte',
                 'path_pdf' => '',
-                'valor_compra' => '9'
+                'valor_compra' => '9.9'
             ],
         ]);
     }

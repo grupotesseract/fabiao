@@ -47,7 +47,7 @@ class TextosCubo extends Model
         'resposta_pe' => 'string',
         'resposta_pf' => 'string',
         'path_pdf' => 'string',
-        'valor_compra' => 'integer'
+        'valor_compra' => 'string'
     ];
 
     /**
