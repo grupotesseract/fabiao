@@ -17,9 +17,9 @@ class PerguntasController extends Controller
 	public function perguntas()
 	{
 		$response = array_collapse([
+			TextoExposicaoACrise::get(),
 			TextoPosicaoFinanceira::get(),
 			TextoPosicionamentoEstrategico::get(),
-			TextoExposicaoACrise::get(),
 		]);
 
 		return response($response);
