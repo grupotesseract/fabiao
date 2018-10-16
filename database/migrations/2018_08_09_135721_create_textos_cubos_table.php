@@ -20,7 +20,7 @@ class CreateTextosCubosTable extends Migration
             $table->text('resposta_pe');
             $table->text('resposta_pf');
             $table->text('path_pdf');
-            $table->integer('valor_compra');
+            $table->decimal('valor_compra', 18, 2);
             $table->timestamps();
             $table->softDeletes();
         });

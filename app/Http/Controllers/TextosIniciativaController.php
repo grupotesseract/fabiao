@@ -41,7 +41,9 @@ class TextosIniciativaController extends AppBaseController
      */
     public function create()
     {
-        return view('textos_iniciativas.create');
+        $textosIniciativa = textosIniciativa::get();
+        $textosCubo =  TextosCubo::get(['descritivo', 'id']);
+        return view('textos_iniciativas.create')->with(compact('textosIniciativa', 'textosCubo'));
     }
 
     /**

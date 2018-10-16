@@ -14,7 +14,7 @@
                 <div class="row">
                     {!! Form::open(['route' => 'textosDetalhamentoIniciativas.store']) !!}
 
-                        @include('textos_detalhamento_iniciativas.fields')
+                        @include('textos_detalhamento_iniciativas.create_fields')
 
                     {!! Form::close() !!}
                 </div>

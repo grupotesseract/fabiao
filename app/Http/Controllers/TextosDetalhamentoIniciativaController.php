@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TextosDetalhamentoIniciativa;
+use App\Models\TextosIniciativa;
 use App\DataTables\TextosDetalhamentoIniciativaDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateTextosDetalhamentoIniciativaRequest;
@@ -40,7 +41,8 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
      */
     public function create()
     {
-        return view('textos_detalhamento_iniciativas.create');
+        $textosIniciativa = TextosIniciativa::get();
+        return view('textos_detalhamento_iniciativas.create')->with(compact('textosIniciativa'));
     }
 
     /**
@@ -92,13 +94,15 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
     {
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->findWithoutFail($id);
 
+        $textosIniciativa = TextosIniciativa::get();
+
         if (empty($textosDetalhamentoIniciativa)) {
             Flash::error('Textos Detalhamento Iniciativa not found');
 
             return redirect(route('textosDetalhamentoIniciativas.index'));
         }
 
-        return view('textos_detalhamento_iniciativas.edit')->with('textosDetalhamentoIniciativa', $textosDetalhamentoIniciativa);
+        return view('textos_detalhamento_iniciativas.edit')->with(compact('textosDetalhamentoIniciativa', 'textosIniciativa'));
     }
 
     /**
