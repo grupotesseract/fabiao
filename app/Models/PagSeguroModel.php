@@ -52,6 +52,6 @@ class PagSeguroModel extends Model
 
         $pagSeguroInformation = $checkout->send($credentials);
 
-        return redirect($pagSeguroInformation->getLink());
+        return response($pagSeguroInformation->getLink());
     }
 }
