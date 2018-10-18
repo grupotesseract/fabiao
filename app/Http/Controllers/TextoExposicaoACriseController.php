@@ -55,7 +55,7 @@ class TextoExposicaoACriseController extends AppBaseController
 
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->create($input);
 
-        Flash::success('Texto Exposicao A Crise saved successfully.');
+        Flash::success('Texto Exposicao A Crise salvo com sucesso.');
 
         return redirect(route('textoExposicaoACrises.index'));
     }
@@ -72,7 +72,7 @@ class TextoExposicaoACriseController extends AppBaseController
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->findWithoutFail($id);
 
         if (empty($textoExposicaoACrise)) {
-            Flash::error('Texto Exposicao A Crise not found');
+            Flash::error('Texto Exposicao A Crise não encontrado');
 
             return redirect(route('textoExposicaoACrises.index'));
         }
@@ -92,7 +92,7 @@ class TextoExposicaoACriseController extends AppBaseController
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->findWithoutFail($id);
 
         if (empty($textoExposicaoACrise)) {
-            Flash::error('Texto Exposicao A Crise not found');
+            Flash::error('Texto Exposicao A Crise não encontrado');
 
             return redirect(route('textoExposicaoACrises.index'));
         }
@@ -113,14 +113,14 @@ class TextoExposicaoACriseController extends AppBaseController
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->findWithoutFail($id);
 
         if (empty($textoExposicaoACrise)) {
-            Flash::error('Texto Exposicao A Crise not found');
+            Flash::error('Texto Exposicao A Crise não encontrado');
 
             return redirect(route('textoExposicaoACrises.index'));
         }
 
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->update($request->all(), $id);
 
-        Flash::success('Texto Exposicao A Crise updated successfully.');
+        Flash::success('Texto Exposicao A Crise atualizado com sucesso.');
 
         return redirect(route('textoExposicaoACrises.index'));
     }
@@ -137,14 +137,14 @@ class TextoExposicaoACriseController extends AppBaseController
         $textoExposicaoACrise = $this->textoExposicaoACriseRepository->findWithoutFail($id);
 
         if (empty($textoExposicaoACrise)) {
-            Flash::error('Texto Exposicao A Crise not found');
+            Flash::error('Texto Exposicao A Crise não encontrado');
 
             return redirect(route('textoExposicaoACrises.index'));
         }
 
         $this->textoExposicaoACriseRepository->delete($id);
 
-        Flash::success('Texto Exposicao A Crise deleted successfully.');
+        Flash::success('Texto Exposicao A Crise excluído com sucesso.');
 
         return redirect(route('textoExposicaoACrises.index'));
     }

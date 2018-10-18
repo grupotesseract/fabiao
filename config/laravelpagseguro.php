@@ -2,7 +2,7 @@
 
 return [
     /* DEFINE SE SERÁ UTILIZADO O AMBIENTE DE TESTES */
-    'use-sandbox' => true,
+    'use-sandbox' => false,
 
     /*
      * Coloque abaixo as informações do seu cadastro no PagSeguro

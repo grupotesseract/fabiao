@@ -40,7 +40,7 @@ class TextoEntradaController extends AppBaseController
      */
     public function textoEntrada()
     {
-    	return response(TextoEntrada::get());
+        return response(TextoEntrada::get());
     }
 
     /**
@@ -66,7 +66,7 @@ class TextoEntradaController extends AppBaseController
 
         $textoEntrada = $this->textoEntradaRepository->create($input);
 
-        Flash::success('Texto Entrada saved successfully.');
+        Flash::success('Texto Entrada salvo com sucesso.');
 
         return redirect(route('textoEntradas.index'));
     }
@@ -83,7 +83,7 @@ class TextoEntradaController extends AppBaseController
         $textoEntrada = $this->textoEntradaRepository->findWithoutFail($id);
 
         if (empty($textoEntrada)) {
-            Flash::error('Texto Entrada not found');
+            Flash::error('Texto Entrada não encontrado');
 
             return redirect(route('textoEntradas.index'));
         }
@@ -103,7 +103,7 @@ class TextoEntradaController extends AppBaseController
         $textoEntrada = $this->textoEntradaRepository->findWithoutFail($id);
 
         if (empty($textoEntrada)) {
-            Flash::error('Texto Entrada not found');
+            Flash::error('Texto Entrada não encontrado');
 
             return redirect(route('textoEntradas.index'));
         }
@@ -124,14 +124,14 @@ class TextoEntradaController extends AppBaseController
         $textoEntrada = $this->textoEntradaRepository->findWithoutFail($id);
 
         if (empty($textoEntrada)) {
-            Flash::error('Texto Entrada not found');
+            Flash::error('Texto Entrada não encontrado');
 
             return redirect(route('textoEntradas.index'));
         }
 
         $textoEntrada = $this->textoEntradaRepository->update($request->all(), $id);
 
-        Flash::success('Texto Entrada updated successfully.');
+        Flash::success('Texto Entrada atualizado com sucesso.');
 
         return redirect(route('textoEntradas.index'));
     }
@@ -148,14 +148,14 @@ class TextoEntradaController extends AppBaseController
         $textoEntrada = $this->textoEntradaRepository->findWithoutFail($id);
 
         if (empty($textoEntrada)) {
-            Flash::error('Texto Entrada not found');
+            Flash::error('Texto Entrada não encontrado');
 
             return redirect(route('textoEntradas.index'));
         }
 
         $this->textoEntradaRepository->delete($id);
 
-        Flash::success('Texto Entrada deleted successfully.');
+        Flash::success('Texto Entrada excluído com sucesso.');
 
         return redirect(route('textoEntradas.index'));
     }

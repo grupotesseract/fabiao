@@ -66,9 +66,12 @@ class TextosIniciativa extends Model
      */
     public function subitems()
     {
-    	return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'texto_iniciativa_id');
+        return $this->hasMany('App\Models\TextosDetalhamentoIniciativa', 'texto_iniciativa_id');
     }
-    
 
-    
+    public function cubo()
+    {
+        return $this->belongsTo('App\Models\TextosCubo', 'textos_cubos_id');
+    }
+
 }

@@ -55,7 +55,7 @@ class TextoPosicaoFinanceiraController extends AppBaseController
 
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->create($input);
 
-        Flash::success('Texto Posicao Financeira saved successfully.');
+        Flash::success('Texto Posicao Financeira salvo com sucesso.');
 
         return redirect(route('textoPosicaoFinanceiras.index'));
     }
@@ -72,7 +72,7 @@ class TextoPosicaoFinanceiraController extends AppBaseController
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->findWithoutFail($id);
 
         if (empty($textoPosicaoFinanceira)) {
-            Flash::error('Texto Posicao Financeira not found');
+            Flash::error('Texto Posicao Financeira não encontrado');
 
             return redirect(route('textoPosicaoFinanceiras.index'));
         }
@@ -92,7 +92,7 @@ class TextoPosicaoFinanceiraController extends AppBaseController
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->findWithoutFail($id);
 
         if (empty($textoPosicaoFinanceira)) {
-            Flash::error('Texto Posicao Financeira not found');
+            Flash::error('Texto Posicao Financeira não encontrado');
 
             return redirect(route('textoPosicaoFinanceiras.index'));
         }
@@ -113,14 +113,14 @@ class TextoPosicaoFinanceiraController extends AppBaseController
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->findWithoutFail($id);
 
         if (empty($textoPosicaoFinanceira)) {
-            Flash::error('Texto Posicao Financeira not found');
+            Flash::error('Texto Posicao Financeira não encontrado');
 
             return redirect(route('textoPosicaoFinanceiras.index'));
         }
 
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->update($request->all(), $id);
 
-        Flash::success('Texto Posicao Financeira updated successfully.');
+        Flash::success('Texto Posicao Financeira atualizado com sucesso.');
 
         return redirect(route('textoPosicaoFinanceiras.index'));
     }
@@ -137,14 +137,14 @@ class TextoPosicaoFinanceiraController extends AppBaseController
         $textoPosicaoFinanceira = $this->textoPosicaoFinanceiraRepository->findWithoutFail($id);
 
         if (empty($textoPosicaoFinanceira)) {
-            Flash::error('Texto Posicao Financeira not found');
+            Flash::error('Texto Posicao Financeira não encontrado');
 
             return redirect(route('textoPosicaoFinanceiras.index'));
         }
 
         $this->textoPosicaoFinanceiraRepository->delete($id);
 
-        Flash::success('Texto Posicao Financeira deleted successfully.');
+        Flash::success('Texto Posicao Financeira excluído com sucesso.');
 
         return redirect(route('textoPosicaoFinanceiras.index'));
     }

@@ -42,6 +42,11 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
     public function create()
     {
         $textosIniciativa = TextosIniciativa::get();
+
+        foreach ($textosIniciativa as $textoIniciativa) {
+            $textoIniciativa->descritivo .= ' (' . $textoIniciativa->cubo->descritivo . ')';
+        }
+
         return view('textos_detalhamento_iniciativas.create')->with(compact('textosIniciativa'));
     }
 
@@ -58,7 +63,7 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
 
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->create($input);
 
-        Flash::success('Textos Detalhamento Iniciativa saved successfully.');
+        Flash::success('Textos Detalhamento Iniciativa salvo com sucesso.');
 
         return redirect(route('textosDetalhamentoIniciativas.index'));
     }
@@ -75,7 +80,7 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosDetalhamentoIniciativa)) {
-            Flash::error('Textos Detalhamento Iniciativa not found');
+            Flash::error('Textos Detalhamento Iniciativa não encontrado');
 
             return redirect(route('textosDetalhamentoIniciativas.index'));
         }
@@ -96,8 +101,12 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
 
         $textosIniciativa = TextosIniciativa::get();
 
+        foreach ($textosIniciativa as $textoIniciativa) {
+            $textoIniciativa->descritivo .= ' (' . $textoIniciativa->cubo->descritivo . ')';
+        }
+
         if (empty($textosDetalhamentoIniciativa)) {
-            Flash::error('Textos Detalhamento Iniciativa not found');
+            Flash::error('Textos Detalhamento Iniciativa não encontrado');
 
             return redirect(route('textosDetalhamentoIniciativas.index'));
         }
@@ -118,14 +127,14 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosDetalhamentoIniciativa)) {
-            Flash::error('Textos Detalhamento Iniciativa not found');
+            Flash::error('Textos Detalhamento Iniciativa não encontrado');
 
             return redirect(route('textosDetalhamentoIniciativas.index'));
         }
 
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->update($request->all(), $id);
 
-        Flash::success('Textos Detalhamento Iniciativa updated successfully.');
+        Flash::success('Textos Detalhamento Iniciativa atualizado com sucesso.');
 
         return redirect(route('textosDetalhamentoIniciativas.index'));
     }
@@ -142,14 +151,14 @@ class TextosDetalhamentoIniciativaController extends AppBaseController
         $textosDetalhamentoIniciativa = $this->textosDetalhamentoIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosDetalhamentoIniciativa)) {
-            Flash::error('Textos Detalhamento Iniciativa not found');
+            Flash::error('Textos Detalhamento Iniciativa não encontrado');
 
             return redirect(route('textosDetalhamentoIniciativas.index'));
         }
 
         $this->textosDetalhamentoIniciativaRepository->delete($id);
 
-        Flash::success('Textos Detalhamento Iniciativa deleted successfully.');
+        Flash::success('Textos Detalhamento Iniciativa excluído com sucesso.');
 
         return redirect(route('textosDetalhamentoIniciativas.index'));
     }

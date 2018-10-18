@@ -52,21 +52,21 @@ class UserController extends AppBaseController
      */
     public function store(CreateUserRequest $request)
     {
-	try {
-	    $input = $request->all();
+    try {
+        $input = $request->all();
 
-	    $input['password'] = Hash::make($input['password']);
+        $input['password'] = Hash::make($input['password']);
 
-	    $user = $this->userRepository->create($input);
+        $user = $this->userRepository->create($input);
 
-	    Flash::success('User saved successfully.');
+        Flash::success('Usuário salvo com sucesso.');
 
-	    return redirect(route('users.index'));
-	} catch (\Throwable $e) {
-	    Flash::error('Usuário já existente no banco. Use um endereço de email diferente.');
+        return redirect(route('users.index'));
+    } catch (\Throwable $e) {
+        Flash::error('Usuário já existente no banco. Use um endereço de email diferente.');
 
-	    return redirect(route('users.index'));
-	}
+        return redirect(route('users.index'));
+    }
     }
 
     /**
@@ -81,7 +81,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuário não encontrado');
 
             return redirect(route('users.index'));
         }
@@ -101,7 +101,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuário não encontrado');
 
             return redirect(route('users.index'));
         }
@@ -122,18 +122,18 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuário não encontrado');
 
             return redirect(route('users.index'));
         }
 
-	$input = $request->all();
+    $input = $request->all();
 
-	$input['password'] = Hash::make($input['password']);
+    $input['password'] = Hash::make($input['password']);
 
         $user = $this->userRepository->update($input, $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success('Usuário atualizado com sucesso.');
 
         return redirect(route('users.index'));
     }
@@ -150,14 +150,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuário não encontrado');
 
             return redirect(route('users.index'));
         }
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success('Usuário excluído com sucesso.');
 
         return redirect(route('users.index'));
     }

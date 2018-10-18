@@ -55,7 +55,7 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
 
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->create($input);
 
-        Flash::success('Texto Posicionamento Estrategico saved successfully.');
+        Flash::success('Texto Posicionamento Estrategico salvo com sucesso.');
 
         return redirect(route('textoPosicionamentoEstrategicos.index'));
     }
@@ -72,7 +72,7 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->findWithoutFail($id);
 
         if (empty($textoPosicionamentoEstrategico)) {
-            Flash::error('Texto Posicionamento Estrategico not found');
+            Flash::error('Texto Posicionamento Estrategico não encontrado');
 
             return redirect(route('textoPosicionamentoEstrategicos.index'));
         }
@@ -92,7 +92,7 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->findWithoutFail($id);
 
         if (empty($textoPosicionamentoEstrategico)) {
-            Flash::error('Texto Posicionamento Estrategico not found');
+            Flash::error('Texto Posicionamento Estrategico não encontrado');
 
             return redirect(route('textoPosicionamentoEstrategicos.index'));
         }
@@ -113,14 +113,14 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->findWithoutFail($id);
 
         if (empty($textoPosicionamentoEstrategico)) {
-            Flash::error('Texto Posicionamento Estrategico not found');
+            Flash::error('Texto Posicionamento Estrategico não encontrado');
 
             return redirect(route('textoPosicionamentoEstrategicos.index'));
         }
 
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->update($request->all(), $id);
 
-        Flash::success('Texto Posicionamento Estrategico updated successfully.');
+        Flash::success('Texto Posicionamento Estrategico atualizado com sucesso.');
 
         return redirect(route('textoPosicionamentoEstrategicos.index'));
     }
@@ -137,14 +137,14 @@ class TextoPosicionamentoEstrategicoController extends AppBaseController
         $textoPosicionamentoEstrategico = $this->textoPosicionamentoEstrategicoRepository->findWithoutFail($id);
 
         if (empty($textoPosicionamentoEstrategico)) {
-            Flash::error('Texto Posicionamento Estrategico not found');
+            Flash::error('Texto Posicionamento Estrategico não encontrado');
 
             return redirect(route('textoPosicionamentoEstrategicos.index'));
         }
 
         $this->textoPosicionamentoEstrategicoRepository->delete($id);
 
-        Flash::success('Texto Posicionamento Estrategico deleted successfully.');
+        Flash::success('Texto Posicionamento Estrategico excluído com sucesso.');
 
         return redirect(route('textoPosicionamentoEstrategicos.index'));
     }

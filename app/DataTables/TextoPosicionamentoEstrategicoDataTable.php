@@ -46,13 +46,12 @@ class TextoPosicionamentoEstrategicoDataTable extends DataTable
             ->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
-		'buttons' => [
-			['extend' => 'create','text' => '<i class="fa fa-plus"></i> Adicionar'],
-			['extend' => 'reload','text' => '<i class="fa fa-refresh"></i> Atualizar'],
-		],
-		'language' => [
-			'url' => url('//cdn.datatables.net/plug-ins/1.10.18/i18n/Portuguese-Brasil.json')
-		],
+                'buttons' => [
+                    ['extend' => 'reload','text' => '<i class="fa fa-refresh"></i> Atualizar'],
+                ],
+                'language' => [
+                    'url' => url('//cdn.datatables.net/plug-ins/1.10.18/i18n/Portuguese-Brasil.json')
+                ],
             ]);
     }
 
