@@ -40,7 +40,7 @@ class ClienteAPIController extends AppBaseController
         $this->clienteRepository->pushCriteria(new LimitOffsetCriteria($request));
         $clientes = $this->clienteRepository->all();
 
-        return $this->sendResponse($clientes->toArray(), 'Clientes retrieved com sucesso');
+        return $this->sendResponse($clientes->toArray(), 'Clientes obtidos com sucesso');
     }
 
     /**
@@ -76,7 +76,7 @@ class ClienteAPIController extends AppBaseController
             return $this->sendError('Cliente não encontrado');
         }
 
-        return $this->sendResponse($cliente->toArray(), 'Cliente retrieved com sucesso');
+        return $this->sendResponse($cliente->toArray(), 'Cliente obtidos com sucesso');
     }
 
     /**
