@@ -40,7 +40,7 @@ class ClienteAPIController extends AppBaseController
         $this->clienteRepository->pushCriteria(new LimitOffsetCriteria($request));
         $clientes = $this->clienteRepository->all();
 
-        return $this->sendResponse($clientes->toArray(), 'Clientes retrieved successfully');
+        return $this->sendResponse($clientes->toArray(), 'Clientes obtidos com sucesso');
     }
 
     /**
@@ -57,7 +57,7 @@ class ClienteAPIController extends AppBaseController
 
         $clientes = $this->clienteRepository->create($input);
 
-        return $this->sendResponse($clientes->toArray(), 'Cliente saved successfully');
+        return $this->sendResponse($clientes->toArray(), 'Cliente salvo com sucesso');
     }
 
     /**
@@ -73,10 +73,10 @@ class ClienteAPIController extends AppBaseController
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
-            return $this->sendError('Cliente not found');
+            return $this->sendError('Cliente não encontrado');
         }
 
-        return $this->sendResponse($cliente->toArray(), 'Cliente retrieved successfully');
+        return $this->sendResponse($cliente->toArray(), 'Cliente obtidos com sucesso');
     }
 
     /**
@@ -95,12 +95,12 @@ class ClienteAPIController extends AppBaseController
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
-            return $this->sendError('Cliente not found');
+            return $this->sendError('Cliente não encontrado');
         }
 
         $cliente = $this->clienteRepository->update($input, $id);
 
-        return $this->sendResponse($cliente->toArray(), 'Cliente updated successfully');
+        return $this->sendResponse($cliente->toArray(), 'Cliente atualizado com sucesso');
     }
 
     /**
@@ -116,12 +116,12 @@ class ClienteAPIController extends AppBaseController
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
         if (empty($cliente)) {
-            return $this->sendError('Cliente not found');
+            return $this->sendError('Cliente não encontrado');
         }
 
         $cliente->delete();
 
-        return $this->sendResponse($id, 'Cliente deleted successfully');
+        return $this->sendResponse($id, 'Cliente excluído com sucesso');
     }
 
     public function pagamento(CreateClienteAPIRequest $request)

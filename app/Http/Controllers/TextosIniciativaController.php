@@ -59,7 +59,7 @@ class TextosIniciativaController extends AppBaseController
 
         $textosIniciativa = $this->textosIniciativaRepository->create($input);
 
-        Flash::success('Textos Iniciativa saved successfully.');
+        Flash::success('Textos Iniciativa salvo com sucesso.');
 
         return redirect(route('textosIniciativas.index'));
     }
@@ -76,7 +76,7 @@ class TextosIniciativaController extends AppBaseController
         $textosIniciativa = $this->textosIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosIniciativa)) {
-            Flash::error('Textos Iniciativa not found');
+            Flash::error('Textos Iniciativa não encontrado');
 
             return redirect(route('textosIniciativas.index'));
         }
@@ -98,7 +98,7 @@ class TextosIniciativaController extends AppBaseController
         $textosCubo =  TextosCubo::get(['descritivo', 'id']);
 
         if (empty($textosIniciativa)) {
-            Flash::error('Textos Iniciativa not found');
+            Flash::error('Textos Iniciativa não encontrado');
 
             return redirect(route('textosIniciativas.index'));
         }
@@ -119,14 +119,14 @@ class TextosIniciativaController extends AppBaseController
         $textosIniciativa = $this->textosIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosIniciativa)) {
-            Flash::error('Textos Iniciativa not found');
+            Flash::error('Textos Iniciativa não encontrado');
 
             return redirect(route('textosIniciativas.index'));
         }
 
         $textosIniciativa = $this->textosIniciativaRepository->update($request->all(), $id);
 
-        Flash::success('Textos Iniciativa updated successfully.');
+        Flash::success('Textos Iniciativa atualizado com sucesso.');
 
         return redirect(route('textosIniciativas.index'));
     }
@@ -143,14 +143,14 @@ class TextosIniciativaController extends AppBaseController
         $textosIniciativa = $this->textosIniciativaRepository->findWithoutFail($id);
 
         if (empty($textosIniciativa)) {
-            Flash::error('Textos Iniciativa not found');
+            Flash::error('Textos Iniciativa não encontrado');
 
             return redirect(route('textosIniciativas.index'));
         }
 
         $this->textosIniciativaRepository->delete($id);
 
-        Flash::success('Textos Iniciativa deleted successfully.');
+        Flash::success('Textos Iniciativa excluído com sucesso.');
 
         return redirect(route('textosIniciativas.index'));
     }

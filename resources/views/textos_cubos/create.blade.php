@@ -14,7 +14,7 @@
                 <div class="row">
                     {!! Form::open(['route' => 'textosCubos.store', 'files' => true]) !!}
 
-                        @include('textos_cubos.fields')
+                        @include('textos_cubos.create_fields')
 
                     {!! Form::close() !!}
                 </div>

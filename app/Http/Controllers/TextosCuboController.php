@@ -124,7 +124,7 @@ class TextosCuboController extends AppBaseController
 
         $textosCubo = $this->textosCuboRepository->create($input);
 
-        Flash::success('Textos Cubo saved successfully.');
+        Flash::success('Textos Cubo salvo com sucesso.');
 
         return redirect(route('textosCubos.index'));
     }
@@ -141,7 +141,7 @@ class TextosCuboController extends AppBaseController
         $textosCubo = $this->textosCuboRepository->findWithoutFail($id);
 
         if (empty($textosCubo)) {
-            Flash::error('Textos Cubo not found');
+            Flash::error('Textos Cubo não encontrado');
 
             return redirect(route('textosCubos.index'));
         }
@@ -161,7 +161,7 @@ class TextosCuboController extends AppBaseController
         $textosCubo = $this->textosCuboRepository->findWithoutFail($id);
 
         if (empty($textosCubo)) {
-            Flash::error('Textos Cubo not found');
+            Flash::error('Textos Cubo não encontrado');
 
             return redirect(route('textosCubos.index'));
         }
@@ -182,7 +182,7 @@ class TextosCuboController extends AppBaseController
         $textosCubo = $this->textosCuboRepository->findWithoutFail($id);
 
         if (empty($textosCubo)) {
-            Flash::error('Textos Cubo not found');
+            Flash::error('Textos Cubo não encontrado');
 
             return redirect(route('textosCubos.index'));
         }
@@ -199,7 +199,7 @@ class TextosCuboController extends AppBaseController
 
         $textosCubo = $this->textosCuboRepository->update($input, $id);
 
-        Flash::success('Textos Cubo updated successfully.');
+        Flash::success('Textos Cubo atualizado com sucesso.');
 
         return redirect(route('textosCubos.index'));
     }
@@ -216,14 +216,14 @@ class TextosCuboController extends AppBaseController
         $textosCubo = $this->textosCuboRepository->findWithoutFail($id);
 
         if (empty($textosCubo)) {
-            Flash::error('Textos Cubo not found');
+            Flash::error('Textos Cubo não encontrado');
 
             return redirect(route('textosCubos.index'));
         }
 
         $this->textosCuboRepository->delete($id);
 
-        Flash::success('Textos Cubo deleted successfully.');
+        Flash::success('Textos Cubo excluído com sucesso.');
 
         return redirect(route('textosCubos.index'));
     }
